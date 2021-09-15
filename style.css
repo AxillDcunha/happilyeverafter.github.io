@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body
+{
+    font-family:sans-serif;
+}
+.top-header-1{
+    position: fixed;
+}
+
+.nav{
+    position: fixed;
+    width: 100vw;
+    height: 4vh;
+    padding: 4px;
+    
+    background-color: rgb(255, 0, 85);
+    
+}
+
+.nav list{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.nav__list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2rem;
+    padding-top: 6px;
+    margin: 0 2rem;
+}
+
+/* .nav__listlogo{
+    list-style: none;
+    border:2px solid black;
+    border-style:double ;
+} */
+
+.nav__listitem{
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    padding: 1.5rem 1 rem;
+}
+.nav__listitem:hover .nav__listitemdrop li{
+    display: block;
+
+}
+
+
+.nav__listitemdrop {
+    /* padding-top: 10px; */
+    margin-top: 9px;
+    position: absolute;
+    /* top: 4rem; */
+    left: -1rem;
+    /* box-shadow: 0 0 10px peachpuff;*/
+    background-color: beige; 
+    /* border-radius: 4rem; */
+    width: 5rem;
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+.header-sub{
+    right: 0;
+}
+.subscribe{
+    display: flex;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    list-style: none;
+}
+.subscribe li{
+    margin: 5px;
+    list-style: none;
+}
+
+
+
+.nav__listitemdrop li {
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+    
+    /* background-color: aqua; */
+    display:none;
+}
+
+/* .nav__listitemdrop  :hover{
+    display:block;
+
+} */
+
+
+
+
+
+.top-header{
+    height: 35px;
+    width: 100%;
+   
+    background: #540000;
+}
+.top-header-1{
+    height: 35px;
+    width: 100%;
+   
+    background: #941D1D;
+}
+
+.top-banner-img{
+    width: 100%;
+}
+
+
+.catogeries{
+    /* padding: 50px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.subcat{
+    display: inline-block;
+    background-color: black;
+    height: 130px;
+    width: 500px;
+    margin: 5px;
+}
+.cat{
+    width: 100%;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+}
+.footer1{
+    
+    border-right-style: solid;
+    border-right-width: 1px;
+    width: 50%;
+}
+
+footer{
+    display: flex;
+    height: 200px;
+    border-top-style: solid;
+    border-top-width: 1px;
+
+
+    /* border: 2px solid black; */
+
+
+}
