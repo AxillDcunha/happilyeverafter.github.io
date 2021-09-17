@@ -9,12 +9,16 @@ body
 {
     font-family:sans-serif;
 }
-.top-header-1{
+/* .top-header-1{
     position: fixed;
-}
+} */
+
+/* .top-header{
+    position: fixed;
+} */
 
 .nav{
-    position: fixed;
+    /* position: fixed; */
     width: 100vw;
     height: 4vh;
     padding: 4px;
