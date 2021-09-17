@@ -138,7 +138,15 @@ body
 
     
 }
+.foot-cate a {
+    justify-content: end;
+    /* height: 130px; */
+    width: 1000px;
+    text-decoration: none;
 
+    margin: 5px;
+    display: flex;
+}
 
 .cat-heading{
     display: flex;
