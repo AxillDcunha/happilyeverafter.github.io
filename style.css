@@ -180,9 +180,9 @@ body
 
 .subcat{
     display: inline-block;
-    background-color: black;
-    height: 130px;
-    width: 500px;
+    background-color: rgb(255, 58, 239);
+    height: 120px;
+    width: 590px;
     margin: 5px;
 }
 .cat{
