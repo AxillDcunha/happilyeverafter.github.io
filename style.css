@@ -54,9 +54,12 @@ body
     font-weight: bold;
     position: relative;
     padding: 1.5rem 1 rem;
+    cursor: pointer;
 }
 .nav__listitem:hover .nav__listitemdrop li{
     display: block;
+    
+
 
 }
 
