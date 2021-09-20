@@ -79,6 +79,10 @@ body
     gap: 0.5rem;
     
 }
+.nav__listitemdrop :hover .nav__listitemdrop{
+    display: block;
+
+}
 .header-sub{
     right: 0;
 }
