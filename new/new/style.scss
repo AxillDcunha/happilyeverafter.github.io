@@ -23,12 +23,46 @@ $radius: 0.2rem;
 
 body {
   font-family: Montserrat, sans-serif;
+
+}
+
+.top-header{
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  background-color: #E93B81;
+  a {
+    text-decoration: none;
+    color: #e1e5ee;
+  }
+
+  &__head{
+    display: flex;
+    justify-content: end;
+    text-decoration: none;
+    
+  }
+  &__list{
+    display: flex;
+    text-decoration: none ;
+
+    list-style: none;
+    gap: 2rem;
+    margin: 0 2rem;
+    padding: 1rem 0.5rem;
+    color: #FFE5E2;
+    font-weight: bold;
+    
+      
+    
+  }
 }
 
 .nav {
   position: fixed;
   width: 100vw;
-  box-shadow: 0 0 10px $clr-gray300;
+  background-color: #F5ABC9;
+  
 
   &__list {
     display: flex;
@@ -59,6 +93,7 @@ body {
       position: relative;
       padding: 1.5rem 1rem;
       cursor: pointer;
+      
 
       &::after {
         content: "";
@@ -104,6 +139,7 @@ body {
           padding: 0.5rem 1rem;
           border-radius: $radius;
           transition: background-color 200ms ease-in-out;
+          
 
           &:hover,
           &:focus {
