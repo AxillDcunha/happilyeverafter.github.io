@@ -12,11 +12,50 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+.top-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  background-color: #E93B81;
+}
+
+.top-header a {
+  text-decoration: none;
+  color: #e1e5ee;
+}
+
+.top-header__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  text-decoration: none;
+}
+
+.top-header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 2rem;
+  margin: 0 2rem;
+  padding: 1rem 0.5rem;
+  color: #FFE5E2;
+  font-weight: bold;
+}
+
 .nav {
   position: fixed;
   width: 100vw;
-  -webkit-box-shadow: 0 0 10px #e1e5ee;
-          box-shadow: 0 0 10px #e1e5ee;
+  background-color: #F5ABC9;
 }
 
 .nav__list {
@@ -48,6 +87,7 @@ body {
 .nav__listlogo svg:hover, .nav__listlogo svg:focus {
   fill: #f06292;
 }
+/* tod is great day */
 
 .nav__listitem {
   list-style: none;
