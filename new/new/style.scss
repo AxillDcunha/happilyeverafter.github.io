@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100vw;
+  height: 3rem;
   background-color: #E93B81;
   a {
     text-decoration: none;
@@ -91,7 +92,7 @@ body {
       list-style: none;
       font-weight: bold;
       position: relative;
-      padding: 1.5rem 1rem;
+      padding: 1rem 1rem;
       cursor: pointer;
       
 
@@ -120,7 +121,7 @@ body {
 
       &drop {
         position: absolute;
-        top: 4rem;
+        top: 3.1rem;
         left: -1rem;
         // box-shadow: 0 0 10px $clr-gray300;
         background-color: #F4DADA;
