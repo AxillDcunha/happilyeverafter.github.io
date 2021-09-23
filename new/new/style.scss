@@ -128,16 +128,22 @@ body {
         width: 30rem;
         padding: 1rem;
         display: flex;
-        flex-direction: column;
+        flex-direction:row;
         gap: 0.5rem;
         opacity: 0;
         visibility: hidden;
         transition: opacity 200ms ease-in-out;
-        height: 30rem;
+        height: 20rem;
 
-        .listflex{
-          display: flex;
-          flex-direction: row;
+        .listflex {
+          font-weight: lighter;
+          
+        }
+        .list-light{
+          font-weight: lighter;
+        }
+        .list-heading{
+          font-weight: bold;
           
         }
         
