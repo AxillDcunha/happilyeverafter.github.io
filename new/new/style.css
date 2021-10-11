@@ -271,3 +271,67 @@ footer {
   /* border: 2px solid black; */
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* new insertion here */
+
+
+.catogeries{
+  /* padding: 50px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+.foot-cate a {
+  justify-content: end;
+  /* height: 130px; */
+  width: 1000px;
+  text-decoration: none;
+
+  margin: 5px;
+  display: flex;
+}
+
+.cat-heading{
+  display: flex;
+  padding: 5px;
+  margin-left: 10px;
+ justify-content: space-between;
+}
+.head-cate{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  margin-left: 5px;
+}
+
+.cat-heading a{
+  display: inline-block;
+  text-decoration: none;
+  /* justify-content: space-between; */
+  color: rgb(255, 0, 136);
+  
+}
+
+
+
+
+
+.subcat{
+  display: inline-block;
+  background-color: rgb(255, 58, 239);
+  height: 120px;
+  width: 590px;
+  margin: 5px;
+}
+.cat{
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
