@@ -1,0 +1,238 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body
+{
+    font-family:sans-serif;
+}
+.top-header-1{
+    position: fixed;
+}
+
+.nav{
+    position: fixed;
+    width: 100vw;
+    height: 4vh;
+    padding: 4px;
+    
+    background-color: rgb(255, 0, 85);
+    
+}
+
+.nav list{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.nav__list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 2rem;
+    padding-top: 6px;
+    margin: 0 2rem;
+}
+
+/* .nav__listlogo{
+    list-style: none;
+    border:2px solid black;
+    border-style:double ;
+} */
+
+.nav__listitem{
+    list-style: none;
+    font-weight: bold;
+    position: relative;
+    padding: 1.5rem 1 rem;
+}
+.nav__listitem:hover .nav__listitemdrop li{
+    display: block;
+
+}
+
+
+.nav__listitemdrop {
+    /* padding-top: 10px; */
+    margin-top: 9px;
+    position: absolute;
+    /* top: 4rem; */
+    left: -1rem;
+    /* box-shadow: 0 0 10px peachpuff;*/
+    background-color: beige; 
+    /* border-radius: 4rem; */
+    width: 5rem;
+    /* padding: 1rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+}
+.header-sub{
+    right: 0;
+}
+.subscribe{
+    display: flex;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+    margin-right: 3px;
+}
+.subscribe li{
+    margin: 5px;
+    list-style: none;
+}
+
+
+
+.nav__listitemdrop li {
+    list-style: none;
+    margin: 0;
+    padding: 0%;
+    
+    /* background-color: aqua; */
+    display:none;
+}
+
+/* .nav__listitemdrop  :hover{
+    display:block;
+
+} */
+
+
+
+
+
+.top-header{
+    height: 35px;
+    width: 100%;
+   
+    background: #ff00aa;
+}
+.top-header-1{
+    height: 35px;
+    width: 100%;
+   
+    background: #ff58cd;
+}
+
+
+
+
+.catogeries{
+    padding: 50px;
+    margin-top: -25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+
+.cat-heading{
+    display: flex;
+    margin-top: 100px;
+    padding: 5px;
+    margin-left: 10px;
+   justify-content: space-between;
+}
+.head-cate{
+    display: flex;
+    flex-direction: row;
+     justify-content: space-between;  
+    margin-left: 110px;
+    font-family:proxima-nova, sans-serif;
+    font-size: 150%;
+
+
+
+}
+
+
+
+
+
+
+.subcat{
+    display: inline-block;
+    background-color: black;
+    height: 130px;
+    width: 550px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+.cat{
+    width: 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#cat1{
+background-color:#454e59;
+}
+#cat2{
+    background-color: #58b391; 
+}
+#cat3{
+    background-color: #afde1a;
+}
+#cat4{
+ background-color: #6fea14;
+}
+#cat5{
+ background-color:#e14fc4;
+}
+#cat6{
+ background-color: #9bc0e1;
+}
+#cat7{
+ background-color:#e16199;
+}
+#cat8{
+ background-color: #3e8709;
+}
+#cat9{
+ background-color: #df0b43;
+}
+#cat10{
+ background-color: #a8019d;
+}
+#cat11{
+ background-color:#3345ef;
+}
+#cat12{
+ background-color:#56ea36;
+}
+
+
+.subcatn{
+    border: 2px solid red;
+    padding: 2px 2px;
+    margin: 41px 58px;
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 145%;
+    cursor: pointer;
+}
+.subcatd{
+border: 2px solid red;
+padding: 2px 2px;
+margin: -28px 26px;
+display: block;
+width: 340px;
+font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+
+}
+.subcati{
+    border: 2px solid red;
+    display:block;
+    float:right;  
+}
