@@ -93,6 +93,7 @@ body {
   position: relative;
   padding: 1rem 1rem;
   cursor: pointer;
+  z-index: 10;
 }
 
 .nav__listitem::after {
