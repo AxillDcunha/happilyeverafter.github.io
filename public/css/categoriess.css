@@ -2,6 +2,7 @@
   padding-top: 30px;
   background-color: aqua;
   width: 100%;
+  margin: 0 auto;
   
 }
 .heading-c{
@@ -9,16 +10,27 @@
   background-color: aquamarine;
   display: inline-flex;
 }
-.cat-opt{
-  width: 70%;
-  background-color:salmon;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
+
+.ccontainer1{
+  padding-top: 50px;
 }
-.square{
-  width: 343;
-  height: 100;
-  background-color: blue;
+.cat-1-2{
+  padding-top: 20px;
+}
+.square-b{
+  display: inline-block;
+  background-color: black;
+  height: 130px;
+  width: 550px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.square-w{
+  display: inline-block;
+  background-color: wheat;
+  height: 160px;
+  width: 550px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
