@@ -2,13 +2,19 @@
 const express= require("express");
 const bodyParser=require("body-parser");
 const path=require("path");
-const port= process.env.port||3001
+const expressLayouts=require("express-ejs-layouts")
+const port= process.env.port||3000;
 
 const app=express();
 
 //seting static files
 app.use(express.static("public")); //for servinhg staticfile
+app.use("/css",express.static(__dirname+'public/css')); 
+app.use("/js",express.static(__dirname+'public/js')); 
+app.use("/img",express.static(__dirname+'public/img')); 
+ 
 //setting view engine
+app.use(expressLayouts);
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
@@ -25,10 +31,10 @@ app.get("/",(req,res)=>{
 
 
 
-// //LOGIN
-// app.get("/login",(req,res)=>{
-//     res.status(200).render('index');
-// });
+//LOGIN
+app.get("/login",(req,res)=>{
+    res.status(200).render('login');
+});
 
 
 
