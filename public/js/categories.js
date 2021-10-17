@@ -1,16 +1,30 @@
+const x = document.getElementById("subcat1");
+    const y = document.getElementById("subcat2");
 function myfun() {
-    var x = document.querySelector(".cat1-sub")
-    var y = document.querySelector(".cat2-sub")
+    
     if (x.style.display === "none") {
       x.style.display = "block";
-      if (y.style.display ==="block"){
-          y.style.display = "none";
-      }
+          y.style.visibility = "hidden";
+        
+
     } else {
       x.style.display = "none";
+      y.style.visibility = "none";
+    }
+  }
+  function myfun1() {
+    
+    if (y.style.display === "none") {
+      y.style.display = "block";
+          x.style.visibility = "hidden";
+        
+
+    } else {
+      y.style.display = "none";
+      x.style.visibility = "none";
     }
   }
 
-  
+
 
   
