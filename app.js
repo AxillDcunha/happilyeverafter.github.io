@@ -17,18 +17,18 @@ app.get("/",(req,res)=>{
     res.status(200).render('index');
 });
 
-//CATEGORIES
-app.get("/categories",(req,res)=>{
-    res.status(200).render('index');
-});
+// //CATEGORIES
+// app.get("/categories",(req,res)=>{
+//     res.status(200).render('index');
+// });
 
 
 
 
-//LOGIN
-app.get("/login",(req,res)=>{
-    res.status(200).render('index');
-});
+// //LOGIN
+// app.get("/login",(req,res)=>{
+//     res.status(200).render('index');
+// });
 
 
 
