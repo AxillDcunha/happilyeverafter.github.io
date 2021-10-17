@@ -271,3 +271,40 @@ footer {
   /* border: 2px solid black; */
 }
 /*# sourceMappingURL=style.css.map */
+
+
+/* slideshow here */
+
+.container{
+  margin: 0 auto;
+  width: 100vw;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slides
+{
+  display: flex;
+  height: 100%;
+}
+
+.slide{
+  min-width: 100%;
+}
+.slide img{
+  height: 100%;
+  width: 100%;
+}
+
+.slide-control{
+  position: relative
+  top=50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* slideshow here */
