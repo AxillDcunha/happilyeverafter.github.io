@@ -263,6 +263,17 @@ input {
 .fb-btn {
   border: 2px solid #d3dae9;
   color: #8fa1c7;
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  /* color: #fff; */
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  padding: 8px;
 }
 
 .fb-btn span {
