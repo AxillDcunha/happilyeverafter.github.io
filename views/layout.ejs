@@ -1,137 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="css/style.scss">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login.css">
-  <title>Happily Ever After</title>
+	<title>Wedding planner website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-
 <body>
-  <div class="top-header">
+	<div class="top-header">
 
-    <div class="top-header__head">
-      <ul class="top-header__list">
-        <li><a href="#">Write a review</a></li>
-        <li><a href="#">Subscribe</a></li>
-      </ul>
-    </div>
+		<div class="top-header__head">
+		  <ul class="top-header__list">
+			<li><a href="#">Write a review</a></li>
+			<li><a href="#">Subscribe</a></li>
+		  </ul>
+		</div>
+	
+	
+	  </div>
+ 
+ <!-- header start -->
+ <header class="header">
+ 	<div class="container">
+ 		<div class="row1 v-center">
+ 			<div class="header-item item-left">
+ 				<div class="logo nav__listlogo">
+ 					
+						<svg viewBox="0 0 640 512" width="100" title="infinity">
+							<path
+							  d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z" />
+						  </svg>
+					 
+ 				</div>
+ 			</div>
+ 			<!-- menu start here -->
+ 			<div class="header-item item-center">
+ 				<div class="menu-overlay">
+ 				</div>
+ 				<nav class="menu">
+ 					<div class="mobile-menu-head">
+ 						<div class="go-back"><i class="fa fa-angle-left"></i></div>
+ 						<div class="current-menu-title"></div>
+ 						<div class="mobile-menu-close">&times;</div>
+ 					</div>
+ 					<ul class="menu-main">
 
-
-  </div>
-  <nav class="nav">
-    <ul class="nav__list">
-      <li class="nav__listlogo">
-        <svg viewBox="0 0 640 512" width="100" title="infinity">
-          <path
-            d="M471.1 96C405 96 353.3 137.3 320 174.6 286.7 137.3 235 96 168.9 96 75.8 96 0 167.8 0 256s75.8 160 168.9 160c66.1 0 117.8-41.3 151.1-78.6 33.3 37.3 85 78.6 151.1 78.6 93.1 0 168.9-71.8 168.9-160S564.2 96 471.1 96zM168.9 320c-40.2 0-72.9-28.7-72.9-64s32.7-64 72.9-64c38.2 0 73.4 36.1 94 64-20.4 27.6-55.9 64-94 64zm302.2 0c-38.2 0-73.4-36.1-94-64 20.4-27.6 55.9-64 94-64 40.2 0 72.9 28.7 72.9 64s-32.7 64-72.9 64z" />
-        </svg>
-
-      </li>
-      <li class="nav__listitem">Venues
-        <ul class="nav__listitemdrop">
-          <div class="listflex">
-            <li class="list-heading">By Type</li>
-            <li>Banquet Halls</li>
-            <li>Lawns/Farmhouse</li>
-            <li>Resorts</li>
-            <li>Hotels</li>
-            <li>Destination Wedding</li>
-            <li>View all Venues</li>
-          </div>
-          <div class="listflex">
-            <li class="list-heading">By City</li>
-            <li>Mumbai</li>
-            <li>Delhi</li>
-            <li>Pune</li>
-            <li>Chennai</li>
-            <li>Hyderabad</li>
-            <li>Kolkata</li>
-            <li>More</li>
-          </div>
-
-
-        </ul>
-      </li>
-      </li>
-      <!-- venders -->
-      <li class="nav__listitem">Vendors
-        <ul class="nav__listitemdrop">
-          <div class="listflex list-heading">
-            <li>Photographers</li>
-            <li>Makeup</li>
-            <li>Bridal Wear</li>
-            <li>Groom Wear</li>
-            <li>Music & Dance</li>
-            <li>Florist</li>
-
-          </div>
-          <div class="listflex list-heading">
-            <li>Food</li>
-            <li>Mehdi</li>
-            <li>Planning & Decor</li>
-            <li>Invites & Gifts</li>
-            <li>Jewellary & Accessories</li>
-            <li>Honey Moon</li>
-
-          </div>
-
-
-        </ul>
-      </li>
-      </li>
-      <li class="nav__listitem">Photos
-        <ul class="nav__listitemdrop">
-          <div class="listflex list-heading">
-            <li>Outfits</li>
-            <li>Jewellery & Accessories</li>
-            <li>Mehndi</li>
-            <li>Decor & Ideas</li>
-
-          </div>
-          <div class="listflex list-heading">
-            <li>Wedding Card Design</li>
-            <li>Wedding Photography</li>
-            <li>Groom Wear</li>
-            <li>Bridal Makeup & Hair</li>
-
-          </div>
+						<li class="menu-item-has-children">
+							<a href="#">Venues <i class="fa fa-angle-down"></i></a>
+							<div class="sub-menu mega-menu mega-menu-column-4">
+							  <div class="list-item">
+									<h4 class="title">By Type</h4>
+									<ul>
+										 <li><a href="#">Banquet Halls</a></li>
+										 <li><a href="#">Lawns/Farmhouse</a></li>
+										 <li><a href="#">Resorts</a></li>
+										 <li><a href="#">Hotels</a></li>
+										 <li><a href="#">Destination Wedding</a></li>
+										 <li><a href="#">View all Venues...</a></li>
+									</ul>
+									
+							  </div>
+							  <div class="list-item">
+								  <h4 class="title">By City</h4>
+								  <ul>
+										 <li><a href="#">Mumbai</a></li>
+										 <li><a href="#">Delhi</a></li>
+										 <li><a href="#">Pune</a></li>
+										 <li><a href="#">Hyderabad</a></li>
+										 <li><a href="#">Chennai</a></li>
+										 <li><a href="#">Kolkata</a></li>
+										 <li><a href="#">More...</a></li>
+									</ul>
+									
+							  </div>
+							  
+							  <div class="list-item">
+								   <img src="img/shop1.jpg" alt="shop">
+							  </div>
+							</div>
+						</li>
+ 						
 
 
-        </ul>
-      </li>
+ 						
+						<li class="menu-item-has-children">
+							<a href="#">Vendors <i class="fa fa-angle-down"></i></a>
+							<div class="sub-menu mega-menu mega-menu-column-4">
+							  <div class="list-item">
+									
+									<ul>
+										 <li><a href="#">Photographers</a></li>
+										 <li><a href="#">Makeup</a></li>
+										 <li><a href="#">Bridal Wear</a></li>
+										 <li><a href="#">Groom Wear</a></li>
+										 <li><a href="#">Music & Dance</a></li>
+										 <li><a href="#">Florist</a></li>
+									</ul>
+									
+							  </div>
+							  <div class="list-item">
+								  
+								  <ul>
+										 <li><a href="#">Food</a></li>
+										 <li><a href="#">Mehdi</a></li>
+										 <li><a href="#">Planning & Decor</a></li>
+										 <li><a href="#">Invites & Gifts</a></li>
+										 <li><a href="#">Jewellary & Accessories</a></li>
+										 <li><a href="#">Honey Moon</a></li>
+										 
+									</ul>
+									
+							  </div>
+							  
+							  <div class="list-item">
+								   <img src="img/shop1.jpg" alt="shop">
+							  </div>
+							</div>
+						</li>
 
-      <li class="nav__listitem">Blog
-        <ul class="nav__listitemdrop">
-          <div class="listflex list-heading">
-            <li>Bridal Makeup</li>
-            <li>Honeymoon Travel</li>
-            <li>Wedding songs & Dance Videos</li>
-            <li>Bridal Hairstyle</li>
+						
+						<li class="menu-item-has-children">
+							<a href="#">Photos <i class="fa fa-angle-down"></i></a>
+							<div class="sub-menu mega-menu mega-menu-column-4">
+								<div class="list-item text-center resiz-img">
+									<a href="#">
+									<img src="img/p1.jpg" alt="new Product">
+									<h4 class="title">Outfits</h4>
+									</a>
+								</div>
+								<div class="list-item text-center resiz-img">
+									<a href="#">
+									<img src="img/p2.jpg" alt="new Product">
+									<h4 class="title">Jewellery & Accessories</h4>
+									</a>
+								</div>
+								<div class="list-item text-center resiz-img">
+									<a href="#">
+									<img src="img/p3.jpg" alt="new Product">
+									<h4 class="title">Mehndi</h4>
+									</a>
+								</div>
+								<div class="list-item text-center resiz-img">
+									<a href="#">
+									<img src="img/p3.jpg" alt="new Product">
+									<h4 class="title">Decor & Ideas</h4>
+									</a>
+								</div>
+								<div class="list-item text-center resiz-img">
+									<a href="#">
+									<img src="img/p3.jpg" alt="new Product">
+									<h4 class="title">Wedding Card Design</h4>
+									</a>
+								</div>
+								<div class="list-item text-center resiz-img">
+									<a href="#">
+									<img src="img/p4.jpg" alt="new Product">
+									<h4 class="title">Wedding Photography</h4>
+								   </a>
+								</div>
+								<a href="#" class="more">More...</a>
+							</div>
+						</li>
+ 						<li class="menu-item-has-children">
+ 							<a href="#">Blog <i class="fas fa-angle-down"></i></a>
+ 							<div class="sub-menu single-column-menu">
+ 								<ul>
+ 									<li><a href="#">Bridal Makeup</a></li>
+ 									<li><a href="#">Honeymoon Travel</a></li>
+ 									<li><a href="#">Bridal Hairstyle</a></li>
+									<li><a href="#">Bridal Style advice</a></li>
+									<li><a href="#">More...</a></li>
+ 								</ul>
+ 							</div>
+ 						</li>
+ 						
+ 						<li>
+ 							<a href="#">Contact</a>
+ 						</li>
+ 					</ul>
+ 				</nav>
+ 			</div>
+ 			<!-- menu end here -->
+ 			<div class="header-item item-right">
+				<a href="#"><i class="fas fa-search"></i></a>
+				<a href="#"><button>Login In</button></a>
+				<!-- <a href="#"><i class="fas fa-shopping-cart"></i></a> -->
+ 				<!-- mobile menu trigger -->
+ 				<div class="mobile-menu-trigger">
+ 					<span></span>
+ 				</div>
+ 			</div>
+ 		</div>
+ 	</div>
+ </header>
+ <!-- header end -->
 
-          </div>
-          <div class="listflex list-heading">
-            <li>Wedding Decor Ideas</li>
-            <li>Bridal Style advice</li>
-            <li>Wedding Gift and Favors</li>
-            <li>Budget Weddings</li>
-            <li class="list-light">More...</li>
-
-          </div>
-
-
-        </ul>
-      </li>
-
-      <li class="nav__listitem">Contact</li>
-    </ul>
-  </nav>
-
-<%- body  %> 
+ <!-- banner start -->
+ <section class="banner-section">
+	 
+ 	
+</section>
+ <!-- banner end -->
+ <%- body  %> 
+<script src="js/script.js"></script>
 </body>
-
 </html>
