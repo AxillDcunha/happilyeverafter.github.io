@@ -55,6 +55,7 @@ const userSchema = new mongoose.Schema({
   password: String,
   googleId: String,
   userDisplayName: String,
+  profileImg:String
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -90,6 +91,7 @@ passport.use(
           username: profile.emails[0].value,
           googleId: profile.id,
           userDisplayName: profile.displayName,
+          profileImg:profile.picture
         },
         function (err, user) {
           return cb(err, user);
