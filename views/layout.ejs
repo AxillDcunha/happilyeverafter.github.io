@@ -2,18 +2,27 @@
 <html>
 <head>
 	<title>Wedding planner website</title>
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	
 	<link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/review.css">
+	<link rel="stylesheet" href="css/vendors.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+		<!-- <script src="js/index.js"></script> -->
+	
 </head>
 <body>
 	<div class="top-header">
 
 		<div class="top-header__head">
 		  <ul class="top-header__list">
-			<li><a href="#">Write a review</a></li>
+			<li><a href="/review">Write a review</a></li>
 			<li><a href="#">Subscribe</a></li>
 		  </ul>
 		</div>
@@ -53,11 +62,11 @@
 							  <div class="list-item">
 									<h4 class="title">By Type</h4>
 									<ul>
-										 <li><a href="#">Banquet Halls</a></li>
-										 <li><a href="#">Lawns/Farmhouse</a></li>
-										 <li><a href="#">Resorts</a></li>
-										 <li><a href="#">Hotels</a></li>
-										 <li><a href="#">Destination Wedding</a></li>
+										 <li><a href="/banquethalls">Banquet Halls</a></li>
+										 <li><a href="/lawns">Lawns/Farmhouse</a></li>
+										 <li><a href="/resorts">Resorts</a></li>
+										 <li><a href="/hotels">Hotels</a></li>
+										 <li><a href="/destinationwedding">Destination Wedding</a></li>
 										 <li><a href="#">View all Venues...</a></li>
 									</ul>
 									
@@ -65,12 +74,12 @@
 							  <div class="list-item">
 								  <h4 class="title">By City</h4>
 								  <ul>
-										 <li><a href="#">Mumbai</a></li>
-										 <li><a href="#">Delhi</a></li>
-										 <li><a href="#">Pune</a></li>
-										 <li><a href="#">Hyderabad</a></li>
-										 <li><a href="#">Chennai</a></li>
-										 <li><a href="#">Kolkata</a></li>
+										 <li><a href="/mumbai">Mumbai</a></li>
+										 <li><a href="/delhi">Delhi</a></li>
+										 <li><a href="/pune">Pune</a></li>
+										 <li><a href="/hyderabad">Hyderabad</a></li>
+										 <li><a href="/chennai">Chennai</a></li>
+										 <li><a href="/kolkata">Kolkata</a></li>
 										 <li><a href="#">More...</a></li>
 									</ul>
 									
@@ -91,31 +100,31 @@
 							  <div class="list-item">
 									
 									<ul>
-										 <li><a href="#">Photographers</a></li>
-										 <li><a href="#">Makeup</a></li>
-										 <li><a href="#">Bridal Wear</a></li>
-										 <li><a href="#">Groom Wear</a></li>
-										 <li><a href="#">Music & Dance</a></li>
-										 <li><a href="#">Florist</a></li>
+										 <li><a href="/photographer">Photographers</a></li>
+										 <li><a href="/makeup">Makeup</a></li>
+										 <li><a href="/bridalwear">Bridal Wear</a></li>
+										 <li><a href="/groomwear">Groom Wear</a></li>
+										 <li><a href="/musicanddance">Music & Dance</a></li>
+										 <li><a href="/flourist">Florist</a></li>
 									</ul>
 									
 							  </div>
 							  <div class="list-item">
 								  
 								  <ul>
-										 <li><a href="#">Food</a></li>
-										 <li><a href="#">Mehdi</a></li>
-										 <li><a href="#">Planning & Decor</a></li>
-										 <li><a href="#">Invites & Gifts</a></li>
-										 <li><a href="#">Jewellary & Accessories</a></li>
-										 <li><a href="#">Honey Moon</a></li>
+										 <li><a href="/food">Food</a></li>
+										 <li><a href="/mehndi">Mehndi</a></li>
+										 <li><a href="/planninganddecor">Planning & Decor</a></li>
+										 <li><a href="/invites">Invites & Gifts</a></li>
+										 <li><a href="/jewellary">Jewellary & Accessories</a></li>
+										 <li><a href="/honeymoon">Honey Moon</a></li>
 										 
 									</ul>
 									
 							  </div>
 							  
 							  <div class="list-item">
-								   <img src="img/shop1.jpg" alt="shop">
+								   <img src="img/vendor.png" alt="shop">
 							  </div>
 							</div>
 						</li>
@@ -126,37 +135,37 @@
 							<div class="sub-menu mega-menu mega-menu-column-4">
 								<div class="list-item text-center resiz-img">
 									<a href="#">
-									<img src="img/p1.jpg" alt="new Product">
+									<img src="img/outfit.png" alt="new Product">
 									<h4 class="title">Outfits</h4>
 									</a>
 								</div>
 								<div class="list-item text-center resiz-img">
 									<a href="#">
-									<img src="img/p2.jpg" alt="new Product">
+									<img src="img/jewellery.png" alt="new Product">
 									<h4 class="title">Jewellery & Accessories</h4>
 									</a>
 								</div>
 								<div class="list-item text-center resiz-img">
 									<a href="#">
-									<img src="img/p3.jpg" alt="new Product">
+									<img src="img/Mendhi.png" alt="new Product">
 									<h4 class="title">Mehndi</h4>
 									</a>
 								</div>
 								<div class="list-item text-center resiz-img">
 									<a href="#">
-									<img src="img/p3.jpg" alt="new Product">
+									<img src="img/decor.png" alt="new Product">
 									<h4 class="title">Decor & Ideas</h4>
 									</a>
 								</div>
 								<div class="list-item text-center resiz-img">
 									<a href="#">
-									<img src="img/p3.jpg" alt="new Product">
+									<img src="img/weddingcard.png" alt="new Product">
 									<h4 class="title">Wedding Card Design</h4>
 									</a>
 								</div>
 								<div class="list-item text-center resiz-img">
 									<a href="#">
-									<img src="img/p4.jpg" alt="new Product">
+									<img src="img/photography.png" alt="new Product">
 									<h4 class="title">Wedding Photography</h4>
 								   </a>
 								</div>
@@ -185,7 +194,7 @@
  			<!-- menu end here -->
  			<div class="header-item item-right">
 				<a href="#"><i class="fas fa-search"></i></a>
-				<a href="#"><button class="buttonMain">Login In</button></a>
+				<a href="/login"><button class="buttonMain">Login In</button></a>
 				<!-- <a href="#"><i class="fas fa-shopping-cart"></i></a> -->
  				<!-- mobile menu trigger -->
  				<div class="mobile-menu-trigger">
@@ -205,5 +214,6 @@
  <!-- banner end -->
  <%- body  %> 
 <script src="js/script.js"></script>
+
 </body>
 </html>

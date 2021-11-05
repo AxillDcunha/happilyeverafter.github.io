@@ -55,7 +55,6 @@ const userSchema = new mongoose.Schema({
   password: String,
   googleId: String,
   userDisplayName: String,
-  profileImg:String
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -91,7 +90,6 @@ passport.use(
           username: profile.emails[0].value,
           googleId: profile.id,
           userDisplayName: profile.displayName,
-          profileImg:profile.picture
         },
         function (err, user) {
           return cb(err, user);
@@ -159,7 +157,7 @@ app.post("/register", function (req, res) {
     function (err, user) {
       if (err) {
         console.log(err);
-        res.redirect("/register");
+        res.redirect("/login");
       } else {
         console.log(req);
         passport.authenticate("local")(req, res, function () {
@@ -184,6 +182,110 @@ app.get("/form", function (req, res) {
 app.get("/logout", function (req, res) {
   req.logout();
   res.redirect("/");
+});
+
+
+
+app.get("/review", function (req, res) {
+  res.render("review");
+});
+
+
+//vendors
+app.get("/vendors", function (req, res) {
+  res.render("vendors");
+});
+
+app.get("/photographer", function (req, res) {
+  res.render("vendors/photographer");
+});
+
+app.get("/makeup", function (req, res) {
+  res.render("vendors/makeup");
+});
+app.get("/bridalwear", function (req, res) {
+  res.render("vendors/bridalwear");
+});
+
+app.get("/groomwear", function (req, res) {
+  res.render("vendors/groomwear");
+});
+app.get("/musicanddance", function (req, res) {
+  res.render("vendors/musicanddance");
+});
+
+app.get("/flourist", function (req, res) {
+  res.render("vendors/flourist");
+});
+
+app.get("/honeymoon", function (req, res) {
+  res.render("vendors/honeymoon");
+});
+
+
+app.get("/food", function (req, res) {
+  res.render("vendors/food");
+});
+
+
+app.get("/mehndi", function (req, res) {
+  res.render("vendors/mehndi");
+});
+
+
+app.get("/planninganddecor", function (req, res) {
+  res.render("vendors/planninganddecor");
+});
+
+app.get("/invites", function (req, res) {
+  res.render("vendors/invites");
+});
+
+app.get("/jewellary", function (req, res) {
+  res.render("vendors/jewellary");
+});
+
+
+
+
+//venues
+app.get("/banquethalls", function (req, res) {
+  res.render("venues/banquethalls");
+});
+app.get("/chennai", function (req, res) {
+  res.render("venues/chennai");
+});
+app.get("/hotels", function (req, res) {
+  res.render("venues/hotels");
+});
+app.get("/destinationwedding", function (req, res) {
+  res.render("venues/destinationwedding");
+});
+
+app.get("/delhi", function (req, res) {
+  res.render("venues/delhi");
+});
+
+app.get("/resorts", function (req, res) {
+  res.render("venues/resorts");
+});
+
+app.get("/pune", function (req, res) {
+  res.render("venues/pune");
+});
+
+app.get("/mumbai", function (req, res) {
+  res.render("venues/mumbai");
+});
+
+app.get("/hyderabad", function (req, res) {
+  res.render("venues/hyderabad");
+});
+app.get("/kolkata", function (req, res) {
+  res.render("venues/kolkata");
+});
+app.get("/lawns", function (req, res) {
+  res.render("venues/lawns");
 });
 
 //Listening on port 3000
