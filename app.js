@@ -10,7 +10,7 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
-
+const vendor=require("./models/vendor");
 //Port 
 const port = process.env.port || 3000;
 
@@ -99,11 +99,6 @@ passport.use(
   )
 );
 
-//HOMEPAGE
-app.get("/", (req, res) => {
-  res.status(200).render("index");
-});
-
 app.get(
   "/auth/google",
   passport.authenticate("google", { scope: ["profile", "email"] })
@@ -117,16 +112,7 @@ app.get(
     res.redirect("/");
   }
 );
-
-//CATEGORIES
-app.get("/categories", (req, res) => {
-  res.status(200).render("categories"); //Ejs file not made yet
-});
-
-//LOGIN AND SIGNUP ARE ON SAME PAGE
-app.get("/login", (req, res) => {
-  res.status(200).render("login");
-});
+require('./routes/web')(app,User)
 
 app.post("/login", function (req, res) {
   const user = new User({
@@ -168,125 +154,8 @@ app.post("/register", function (req, res) {
   );
 });
 
-// review form
-app.get("/form", function (req, res) {
-  //Successful authentication, redirect to form .
-  if (req.isAuthenticated()) {
-    res.render("form");
-  } else {
-    res.redirect("/login");
-  }
-});
-
-//logout
-app.get("/logout", function (req, res) {
-  req.logout();
-  res.redirect("/");
-});
 
 
-
-app.get("/review", function (req, res) {
-  res.render("review");
-});
-
-
-//vendors
-app.get("/vendors", function (req, res) {
-  res.render("vendors");
-});
-
-app.get("/photographer", function (req, res) {
-  res.render("vendors/photographer");
-});
-
-app.get("/makeup", function (req, res) {
-  res.render("vendors/makeup");
-});
-app.get("/bridalwear", function (req, res) {
-  res.render("vendors/bridalwear");
-});
-
-app.get("/groomwear", function (req, res) {
-  res.render("vendors/groomwear");
-});
-app.get("/musicanddance", function (req, res) {
-  res.render("vendors/musicanddance");
-});
-
-app.get("/flourist", function (req, res) {
-  res.render("vendors/flourist");
-});
-
-app.get("/honeymoon", function (req, res) {
-  res.render("vendors/honeymoon");
-});
-
-
-app.get("/food", function (req, res) {
-  res.render("vendors/food");
-});
-
-
-app.get("/mehndi", function (req, res) {
-  res.render("vendors/mehndi");
-});
-
-
-app.get("/planninganddecor", function (req, res) {
-  res.render("vendors/planninganddecor");
-});
-
-app.get("/invites", function (req, res) {
-  res.render("vendors/invites");
-});
-
-app.get("/jewellary", function (req, res) {
-  res.render("vendors/jewellary");
-});
-
-
-
-
-//venues
-app.get("/banquethalls", function (req, res) {
-  res.render("venues/banquethalls");
-});
-app.get("/chennai", function (req, res) {
-  res.render("venues/chennai");
-});
-app.get("/hotels", function (req, res) {
-  res.render("venues/hotels");
-});
-app.get("/destinationwedding", function (req, res) {
-  res.render("venues/destinationwedding");
-});
-
-app.get("/delhi", function (req, res) {
-  res.render("venues/delhi");
-});
-
-app.get("/resorts", function (req, res) {
-  res.render("venues/resorts");
-});
-
-app.get("/pune", function (req, res) {
-  res.render("venues/pune");
-});
-
-app.get("/mumbai", function (req, res) {
-  res.render("venues/mumbai");
-});
-
-app.get("/hyderabad", function (req, res) {
-  res.render("venues/hyderabad");
-});
-app.get("/kolkata", function (req, res) {
-  res.render("venues/kolkata");
-});
-app.get("/lawns", function (req, res) {
-  res.render("venues/lawns");
-});
 
 //Listening on port 3000
 app.listen(port, () => {
