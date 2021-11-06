@@ -1,0 +1,52 @@
+.form-vendorform-main{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+.form-vendorform-main1{
+  display: flex;
+  width: 60%;
+  padding-top: 50px;
+
+}
+.form-vendorform-left {
+  width: 45%;
+  
+}
+.form-vendorform-right{
+  width: 55%;
+  display: flex;
+  justify-content: center;
+ 
+}
+.form-vendorform-right1{
+  width: 80%;
+}
+.form-vendorform-right1 header{
+  font-size: larger;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-vendorform-right1 textarea{
+ outline-style: none;
+
+}
+.form-vendorform-right1 textarea :hover{
+  outline: none;
+  
+}
+.form-vendorform-right1 textarea:focus{
+ outline-style: none;
+  
+}
+
+
+.form-vendorform-left img{
+  width: 100%;
+}

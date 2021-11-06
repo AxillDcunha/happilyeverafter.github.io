@@ -54,7 +54,7 @@ a{
 	flex:0 0 75%;
 }
 .header .item-right{
-	flex:0 0 20%;
+	flex:0 0 16%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;

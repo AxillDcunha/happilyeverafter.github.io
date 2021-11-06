@@ -25,11 +25,19 @@ app.get("/", (req, res) => {
     res.status(200).render("categories",{req:req,user:req.user}); //Ejs file not made yet
   });
   
+  app.get("/vendorlogin", (req, res) => {
+    res.status(200).render("vendorlogin",{req:req,user:req.user}); //Ejs file not made yet
+  });
+  
+  
   //LOGIN AND SIGNUP ARE ON SAME PAGE
   app.get("/login", (req, res) => {
     res.status(200).render("login",{req:req ,user:req.user});
   });
   
+  app.get("/vendorform", function (req, res) {
+    res.render("vendorform",{req:req,user:req.user});
+  });
 //venues
 app.get("/banquethalls", function (req, res) {
     res.render("venues/banquethalls",{req:req,user:req.user});
