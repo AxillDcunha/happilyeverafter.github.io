@@ -9,9 +9,33 @@
            <form action="/vendorform" method="post">
                <header>Vendor Details</header>
                <label for="">Brand Name</label>
-               <input type="text" placeholder="brandname" >
+               <input class="input-vendor-form" type="text" placeholder="brandname" >
                <label for="">Description</label>
-               <textarea name="description" cols="48" rows="5"></textarea>
+               <textarea placeholder="Description" class="input-vendor-form" name="description" cols="48" rows="5"></textarea>
+               <label for="">Choose a Categorie</label>
+               <select class="input-vendor-form">  
+                <option value = "choose a categorie"> choose a categorie   
+                </option>  
+                <option value = "Photographers"> Photographers   
+                </option>  
+                <option value = "Makeup"> Makeup  
+                </option>  
+                <option value = "Bridal Wear"> Bridal Wear </option>  
+                <option value = "Groom Wear"> Groom Wear </option>  
+                <option value = "Music & Dance"> Music & Dance </option>  
+                <option value = "Florist"> Florist </option>  
+                <option value = "Food"> Food </option>  
+                <option value = "Mehndi"> Mehndi </option>  
+                <option value = "Planning & Decor"> Planning & Decor </option>  
+                <option value = "Invites & Gifts"> Invites & Gifts </option>  
+                <option value = "Jewellary & Accessories"> Jewellary & Accessories </option>  
+                <option value = "Honey Moon"> Honey Moon </option>  
+                </select> 
+                <label for="">Price</label>
+                <input class="input-vendor-form" placeholder="Price" type="number">
+                <label for=""> Upload Photos</label>
+                <input class="input-vendor-form" type="file" accept="image/*">
+                <button class="input-vendor-form-submit" type="submit">Submit</button>
            </form>
             </div>
         </div>

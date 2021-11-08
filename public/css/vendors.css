@@ -1,3 +1,7 @@
 .vendor-filter{
     background-color: white;
 }
+.card a{
+    text-decoration: none;
+
+}

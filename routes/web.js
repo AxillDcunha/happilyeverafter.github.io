@@ -29,10 +29,12 @@ app.get("/", (req, res) => {
     res.status(200).render("vendorlogin",{req:req,user:req.user}); //Ejs file not made yet
   });
   
-  
   //LOGIN AND SIGNUP ARE ON SAME PAGE
   app.get("/login", (req, res) => {
     res.status(200).render("login",{req:req ,user:req.user});
+  });
+  app.get("/vendorpage", (req, res) => {
+    res.render("vendorpage",{req:req,user:req.user}); //Ejs file not made yet
   });
   
   app.get("/vendorform", function (req, res) {
@@ -171,6 +173,17 @@ app.get("/vendors", function (req, res) {
   });
   
   
+app.get("/:id", (req, res) => {
+  
+  Vendor.find().then(function(vendor) {
+    let vid= req.vendor._id
+    vendor.findById(vid).then(function(vendo) {
+      res.render("login",{req:req,user:req.user,vendo:vendor});
+      
+    })
+  })
+});
+
 
 // review form
 app.get("/form", function (req, res) {
