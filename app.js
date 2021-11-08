@@ -11,6 +11,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const vendor=require("./models/vendor");
+const Vendor = require("./models/vendor");
 //Port 
 const port = process.env.port || 3000;
 
@@ -51,10 +52,18 @@ mongoose.connect("mongodb://localhost:27017/Happilyeverafter", {
 // mongoose.set('useCreateIndex', true);
 
 const userSchema = new mongoose.Schema({
-  email: String,
+  username: String,
   password: String,
   googleId: String,
   userDisplayName: String,
+  usertype:{
+      type: Boolean,
+      default:false
+  },
+  vendorinfo:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref:"Vendor"
+  }
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -112,7 +121,7 @@ app.get(
     res.redirect("/");
   }
 );
-require('./routes/web')(app,User)
+require('./routes/web')(app,User,Vendor)
 
 app.post("/login", function (req, res) {
   const user = new User({

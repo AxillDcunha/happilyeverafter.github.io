@@ -1,31 +1,32 @@
 const mongoose = require("mongoose");
 const vendorSchema = new mongoose.Schema({
-  email: String,
-  password: String,
-  googleId: String,
+  username:{
+    type:String,
+    // unique:true
+  },
   userDisplayName: String,
   description: {
     type: String,
-    required: true
+    // required: true
   },
   name: {
     type: String,
-    required: true
+    // required: true
   },
   img: {
     type: String,
-    required: true
+    // required: true
   },
   price: {
     type: Number,
-    required: true
+    // required: true
   },
   type: {
     type: String,
-    required: true
+    // required: true
   },
 });
 
-const vendor = new mongoose.model("vendor", vendorSchema);
+const Vendor = new mongoose.model("Vendor", vendorSchema);
 
-module.exports= vendor
+module.exports= Vendor

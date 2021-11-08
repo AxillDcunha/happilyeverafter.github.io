@@ -10,7 +10,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 
-function initRoutes(app,User) {
+function initRoutes(app,User,Vendor) {
 
 
     //HOMEPAGE
@@ -86,52 +86,88 @@ app.get("/vendors", function (req, res) {
   });
   
   app.get("/photographer", function (req, res) {
-    res.render("vendors/photographer",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("vendors/photographer",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   app.get("/makeup", function (req, res) {
-    res.render("vendors/makeup",{req:req,user:req.user});
+     Vendor.find().then(function(vendor) {
+      res.render("vendors/makeup",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   app.get("/bridalwear", function (req, res) {
-    res.render("vendors/bridalwear",{req:req,user:req.user});
+     Vendor.find().then(function(vendor) {
+      res.render("vendors/bridalwear",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   app.get("/groomwear", function (req, res) {
-    res.render("vendors/groomwear",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("vendors/groomwear",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   app.get("/musicanddance", function (req, res) {
-    res.render("vendors/musicanddance",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("vendors/musicanddance",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   app.get("/flourist", function (req, res) {
-    res.render("vendors/flourist",{req:req,user:req.user});
+     Vendor.find().then(function(vendor) {
+      res.render("vendors/flourist",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   app.get("/honeymoon", function (req, res) {
-    res.render("vendors/honeymoon",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("vendors/honeymoon",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   
   app.get("/food", function (req, res) {
-    res.render("vendors/food",{req:req,user:req.user});
+   Vendor.find().then(function(vendor) {
+      res.render("vendors/food",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   
   app.get("/mehndi", function (req, res) {
-    res.render("vendors/mehndi",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("vendors/mehndi",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   
   app.get("/planninganddecor", function (req, res) {
-    res.render("vendors/planninganddecor",{req:req,user:req.user});
+     Vendor.find().then(function(vendor) {
+      res.render("vendors/planninganddecor",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   app.get("/invites", function (req, res) {
-    res.render("vendors/invites",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("vendors/invites",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   app.get("/jewellary", function (req, res) {
-    res.render("vendors/jewellary",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("vendors/jewellary",{req:req,user:req.user,vendor:vendor});
+      
+    })
   });
   
   

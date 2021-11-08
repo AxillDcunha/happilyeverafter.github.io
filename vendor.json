@@ -1,0 +1,35 @@
+{
+    "userDisplayName": "TheWeddingFellas",
+  "description": "The Wedding Fellas is a team of photographers based in Bangalore and has been in this industry for many years. Their team specializes in both candid and traditional photography. They are open to travel to different venues and also provide their services for destination weddings as well. They make sure that they make a comfortable atmosphere for their clients to capture their precious moments in the most realistic manner. They make sure that they provide their services in the most perfect way possible. Services Offered: Candid Photoshoot Traditional Photography Wedding Albums Maternity Shoots Pre-Wedding Photoshoot",
+  "name":"The Wedding Fellas",
+  "img": "https://image.wedmegood.com/resized/350X/uploads/project/87328/1591869108_9J8A8813.jpg?crop=189,433,1622,912",
+  "price":"30000",
+  "type":"Photographers"
+}
+
+
+User.insertMany([
+    
+    {
+      "username":"axilldcunha@gmail.com"
+        "userDisplayName": "ADStudio",
+      "description": "The Wedding Fellas is a team of photographers based in Bangalore and has been in this industry for many years. Their team specializes in both candid and traditional photography. They are open to travel to different venues and also provide their services for destination weddings as well. They make sure that they make a comfortable atmosphere for their clients to capture their precious moments in the most realistic manner. They make sure that they provide their services in the most perfect way possible. Services Offered: Candid Photoshoot Traditional Photography Wedding Albums Maternity Shoots Pre-Wedding Photoshoot",
+      "name":"The AD studio",
+      "img": "https://image.wedmegood.com/resized/350X/uploads/project/87328/1591869108_9J8A8813.jpg?crop=189,433,1622,912",
+      "price":"5000",
+      "type":"mehndi"
+    }
+    {
+      "username":"priyaajaydcunha@gmail.com"
+        "userDisplayName": "TheWeddingFellas",
+      "description": "The Wedding Fellas is a team of photographers based in Bangalore and has been in this industry for many years. Their team specializes in both candid and traditional photography. They are open to travel to different venues and also provide their services for destination weddings as well. They make sure that they make a comfortable atmosphere for their clients to capture their precious moments in the most realistic manner. They make sure that they provide their services in the most perfect way possible. Services Offered: Candid Photoshoot Traditional Photography Wedding Albums Maternity Shoots Pre-Wedding Photoshoot",
+      "name":"Axill Photography",
+      "img": "https://image.wedmegood.com/resized/350X/uploads/project/87328/1591869108_9J8A8813.jpg?crop=189,433,1622,912",
+      "price":"25000",
+      "type":"mehndi"
+    }
+]).then(function(){
+    console.log("Data inserted")  // Success
+}).catch(function(error){
+    console.log(error)      // Failure
+});
