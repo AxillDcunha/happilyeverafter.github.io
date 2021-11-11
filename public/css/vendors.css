@@ -1,3 +1,27 @@
 .vendor-filter{
     background-color: white;
 }
+.card a{
+    text-decoration: none;
+
+}
+.categories-1{
+    display: inline-block;
+    background-color: black;
+    height: 130px;
+    width: 550px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    
+  }
+  .categories1{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+  }
+  .categories2{
+      width: 80%;
+      padding-left: 50px;
+  }

@@ -500,3 +500,8 @@ a{
   color: black;
 
 }
+.card a{
+    text-decoration: none;
+	color: #000000;
+
+}

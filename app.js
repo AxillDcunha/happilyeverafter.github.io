@@ -163,7 +163,26 @@ app.post("/register", function (req, res) {
   );
 });
 
+// //ream
+// app.post("/vendorform", function (req, res) {
+//   Vendor.register(
+//     { username: req.body.username, userDisplayName: req.body.Uname },
+//     req.body.password,
+//     function (err, user) {
+//       if (err) {
+//         console.log(err);
+//         res.redirect("/login");
+//       } else {
+//         console.log(req);
+//         passport.authenticate("local")(req, res, function () {
+//           res.redirect("/");
+//         });
+//       }
+//     }
+//   );
 
+
+// });
 
 
 //Listening on port 3000

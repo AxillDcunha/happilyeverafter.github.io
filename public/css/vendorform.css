@@ -8,7 +8,7 @@
 }
 .form-vendorform-main1{
   display: flex;
-  width: 60%;
+  width: 70%;
   padding-top: 50px;
 
 }
@@ -20,9 +20,11 @@
   width: 55%;
   display: flex;
   justify-content: center;
+  background-color: #ffc0cb;
  
 }
 .form-vendorform-right1{
+  padding-top: 30px;
   width: 80%;
 }
 .form-vendorform-right1 header{
@@ -49,4 +51,35 @@
 
 .form-vendorform-left img{
   width: 100%;
+}
+
+.input-vendor-form{
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  height: 100%;
+  outline: 0;
+  padding: 10px 10px 10px;
+  width: 100%;
+}
+.form-vendorform-right1 label{
+  margin: 15px auto 0;
+}
+
+.input-vendor-form-submit{
+  background-color: #08d;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+  height: 50px;
+  margin-top: 38px;
+  outline: 0;
+  text-align: center;
+  width: 60%;
 }

@@ -326,3 +326,11 @@ input {
   margin-top: 2%;
 }
 /*# sourceMappingURL=index.css.map */
+
+.card-p-l{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+

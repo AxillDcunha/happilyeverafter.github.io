@@ -3,11 +3,19 @@
    <% if (vendor.type==="mehndi") { %>
      <div class="col">
        <div class="card">
+         <a href="/">
          <img src="<%=vendor.img  %>" class="card-img-top" alt="...">
          <div class="card-body">
            <h5 class="card-title"><%=vendor.name%></h5>
            <p class="card-text"><%=vendor.description.slice(0,100)%></p>
+           <div class="card-p-l">
+
+           <p class="card-text">₹ <%=vendor.price%></p>
+           <p class="card-text">Location</p>
+
+           </div>
          </div>
+       </a>
        </div>
      </div>
    <% } %>
