@@ -36,6 +36,29 @@ app.get("/", (req, res) => {
   app.get("/vendorpage", (req, res) => {
     res.render("vendorpage",{req:req,user:req.user}); //Ejs file not made yet
   });
+  // review form
+app.get("/form", function (req, res) {
+  //Successful authentication, redirect to form .
+  if (req.isAuthenticated()) {
+    res.render("form",{req:req,user:req.user});
+  } else {
+    res.redirect("/login");
+  }
+});
+
+//logout
+app.get("/logout", function (req, res) {
+  req.logout();
+  res.redirect("/");
+});
+
+
+
+app.get("/review", function (req, res) {
+  res.render("review",{req:req,user:req.user});
+});
+
+  
   
   app.get("/vendorform", function (req, res) {
     res.render("vendorform",{req:req,user:req.user});
@@ -187,29 +210,7 @@ app.get("/:id", async(req, res) => {
 });
 
 
-// review form
-app.get("/form", function (req, res) {
-    //Successful authentication, redirect to form .
-    if (req.isAuthenticated()) {
-      res.render("form",{req:req,user:req.user});
-    } else {
-      res.redirect("/login");
-    }
-  });
-  
-  //logout
-  app.get("/logout", function (req, res) {
-    req.logout();
-    res.redirect("/");
-  });
-  
-  
-  
-  app.get("/review", function (req, res) {
-    res.render("review",{req:req,user:req.user});
-  });
-  
-    
+
 }
 
 module.exports = initRoutes
