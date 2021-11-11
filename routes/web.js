@@ -173,15 +173,17 @@ app.get("/vendors", function (req, res) {
   });
   
   
-app.get("/:id", (req, res) => {
-  
-  Vendor.find().then(function(vendor) {
-    let vid= req.vendor._id
-    vendor.findById(vid).then(function(vendo) {
-      res.render("login",{req:req,user:req.user,vendo:vendor});
-      
+app.get("/:id", async(req, res) => {
+  try {
+    
+    let vid= req.params.id
+    const foo =await Vendor.findById(vid).then(function(vendor) {
+      res.render("vendor_form",{req:req,user:req.user,vendor:vendor});
     })
-  })
+    throw new Error("We have Trooouble:)")
+  } catch (error) {
+    
+  }
 });
 
 

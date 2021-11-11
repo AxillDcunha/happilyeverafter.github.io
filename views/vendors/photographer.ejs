@@ -5,10 +5,10 @@
       <div class="col">
         <div class="card">
           <a href="/<%=vendor._id%>">
-          <img src="<%=vendor.img  %>" class="card-img-top" alt="...">
+          <img src="<%=vendor.img  %>" class="card-img-top img-fluid"  alt="...">
           <div class="card-body">
             <h5 class="card-title"><%=vendor.name%></h5>
-            <p class="card-text"><%=vendor.description.slice(0,100)%></p>
+            <p class="card-text"><%=vendor.description.slice(0,99)%>...</p>
             <div class="card-p-l">
 
             <p class="card-text">₹ <%=vendor.price%></p>

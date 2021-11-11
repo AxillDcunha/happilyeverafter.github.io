@@ -9,11 +9,11 @@
            <form action="/vendorform" method="post">
                <header>Vendor Details</header>
                <label for="">Brand Name</label>
-               <input class="input-vendor-form" type="text" placeholder="brandname" >
+               <input name="userDisplayName" class="input-vendor-form" type="text" placeholder="brandname" >
                <label for="">Description</label>
-               <textarea placeholder="Description" class="input-vendor-form" name="description" cols="48" rows="5"></textarea>
+               <textarea name="description" placeholder="Description" class="input-vendor-form" name="description" cols="48" rows="5"></textarea>
                <label for="">Choose a Categorie</label>
-               <select class="input-vendor-form">  
+               <select name="categorie" class="input-vendor-form">  
                 <option value = "choose a categorie"> choose a categorie   
                 </option>  
                 <option value = "Photographers"> Photographers   
@@ -32,9 +32,9 @@
                 <option value = "Honey Moon"> Honey Moon </option>  
                 </select> 
                 <label for="">Price</label>
-                <input class="input-vendor-form" placeholder="Price" type="number">
+                <input name="price" class="input-vendor-form" placeholder="Price" type="number">
                 <label for=""> Upload Photos</label>
-                <input class="input-vendor-form" type="file" accept="image/*">
+                <input name="img" class="input-vendor-form" type="file" accept="image/*">
                 <button class="input-vendor-form-submit" type="submit">Submit</button>
            </form>
             </div>
