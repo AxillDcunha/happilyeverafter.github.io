@@ -184,7 +184,47 @@ app.post("/register", function (req, res) {
 
 // });
 
+//vendor login reg
+app.post("/vendorlogin", function (req, res) {
+  const user = new User({
+    username: req.body.username,
+    password: req.body.password,
+    usertype:true
+  });
 
+  req.login(user, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      passport.authenticate("local")(req, res, function () {
+        res.redirect("/");
+      });
+    }
+  });
+});
+
+// app.get("/signup",(req,res)=>{
+//     res.status(200).render('login');
+// });
+
+// user registeration form
+app.post("/vendorregister", function (req, res) {
+  User.register(
+    { username: req.body.username, userDisplayName: req.body.Uname,usertype:true },
+    req.body.password,
+    function (err, user) {
+      if (err) {
+        console.log(err);
+        res.redirect("/login");
+      } else {
+        console.log(req);
+        passport.authenticate("local")(req, res, function () {
+          res.redirect("/");
+        });
+      }
+    }
+  );
+});
 //Listening on port 3000
 app.listen(port, () => {
   console.log(`sever started on port ${port}`);

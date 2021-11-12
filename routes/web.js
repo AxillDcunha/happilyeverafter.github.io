@@ -61,7 +61,12 @@ app.get("/review", function (req, res) {
   
   
   app.get("/vendorform", function (req, res) {
-    res.render("vendorform",{req:req,user:req.user});
+    if (req.isAuthenticated() && req.user.usertype === true) {
+      res.render("vendorform",{req:req,user:req.user});
+    } else {
+      res.redirect("/vendorlogin");
+    }
+    
   });
 //venues
 app.get("/banquethalls", function (req, res) {
