@@ -5,23 +5,107 @@
     text-decoration: none;
 
 }
-.categories-1{
-    display: inline-block;
-    background-color: black;
-    height: 130px;
-    width: 550px;
-    margin-right: 10px;
-    margin-bottom: 5px;
+.catogeries-home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.catogeries-title{
     
-  }
-  .categories1{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-  }
-  .categories2{
-      width: 80%;
-      padding-left: 50px;
-  }
+    display: flex;
+    
+    justify-content: center ;
+    align-items: flex-start
+}
+.catogeries-all{
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.cat-box{
+    height: auto;
+    width: 590px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.cat-sub-box{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    box-sizing: border-box;
+    
+    outline: none;
+
+}
+.text-box{
+    height: 120px;
+    width: 340px;
+    padding-left: 20px;
+    display: flex;
+    box-sizing: border-box;
+    
+    outline: none;
+    
+    align-items: center;
+
+}
+.cat-text{
+    width: 250px;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    outline: none;
+}
+.cat-text-1{
+    white-space: pre-wrap;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 600;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    outline: none;
+
+}
+.cat-text2{
+    width: 250px;
+    margin-top: 5px ;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    box-sizing: border-box;
+    
+    outline: none;
+
+}
+.cat-img{
+    height: 120px;
+    width: 250px !important;
+}
+.cat-img img{
+    clip-path: ellipse(99% 140px at 100% 50%);
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    display: inline-block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

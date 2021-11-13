@@ -163,6 +163,11 @@ app.post("/register", function (req, res) {
   );
 });
 
+app.post("/vendorform", function (req, res) {
+
+  
+});
+
 // //ream
 // app.post("/vendorform", function (req, res) {
 //   Vendor.register(
