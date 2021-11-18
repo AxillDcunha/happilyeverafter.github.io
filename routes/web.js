@@ -9,17 +9,43 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
-
+const controller = require("../controllers/controller");
 function initRoutes(app,User,Vendor) {
 
 
     //HOMEPAGE
 app.get("/", (req, res) => {
-    res.status(200).render("index",{req:req,user:req.user});
+  Vendor.find().then(function(vendor) {
+    res.render("index",{req:req,user:req.user,vendor:vendor});
+  })
+   
   });
   
- 
+
+  // API work here
+  app.get("/dashboard", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("dashboard",{req:req,user:req.user,vendor:vendor});
+    })
+    });
   
+    app.get("/add_users", (req, res) => {
+      Vendor.find().then(function(vendor) {
+        res.render("add_users",{req:req,user:req.user,vendor:vendor});
+      })
+      });
+
+      app.get("/update_user", (req, res) => {
+        Vendor.find().then(function(vendor) {
+          res.render("update_user",{req:req,user:req.user,vendor:vendor});
+        })
+        });
+
+
+
+
+    //Api work up
+
   //CATEGORIES
   app.get("/categories", (req, res) => {
     res.status(200).render("categories",{req:req,user:req.user}); //Ejs file not made yet
@@ -200,7 +226,14 @@ app.get("/vendors", function (req, res) {
     })
   });
   
-  
+ 
+  // API
+app.post('/api/users', controller.create);
+app.get('/api/users', controller.find);
+app.put('/api/users/:id', controller.update);
+app.delete('/api/users/:id', controller.delete);
+
+
 app.get("/:id", async(req, res) => {
   try {
     

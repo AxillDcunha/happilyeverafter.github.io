@@ -230,6 +230,32 @@ app.post("/vendorregister", function (req, res) {
     }
   );
 });
+
+
+app.post("/vendorinfo", function (req, res) {
+
+  console.log(req);
+  Vendor.insertMany([
+  
+    {
+      
+      "username" : req.body.userDisplayName,
+      "userDisplayName" :req.body.userDisplayName,
+      "description" : req.body.description,
+      "name" : req.body.userDisplayName,
+      "img" : req.body.img,
+      "price" :req.body.price,
+      "type" : req.body.categorie,
+      "__v" : 0
+  }
+  ]).then(function(){
+    console.log("Data inserted")  // Success
+    res.redirect("/");
+  }).catch(function(error){
+    console.log(error)      // Failure
+  });
+
+});
 //Listening on port 3000
 app.listen(port, () => {
   console.log(`sever started on port ${port}`);

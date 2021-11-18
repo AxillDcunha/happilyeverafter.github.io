@@ -348,8 +348,47 @@ justify-content: center;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.2s;
+    width: 120px;
   }
   .hubcad .hubcontent .hubbtn button:hover{
     transform: scale(0.9);
   }
   
+  .owl{
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1024px){
+    .catogeries-menu-box{
+      width: 800px;
+    }
+    .catogeries-box-text-2{
+      width: 450px;
+    }
+  }
+  
+  @media screen and (max-width: 375px){
+      .catogeries-body-home{
+          width: 100%;
+      }
+      .catogeries-menu-box{
+          width: 300px;
+      }
+      .catogeries-box-text-2{
+          width: 120px;
+      }
+      .catogeries-box-text{
+          width: 130px;
+      }
+      .catogeries-head-left{
+          font-size: 15px;
+      }
+      .catogeries-home-head{
+          margin: 15px;
+          margin-left: 0px;
+          margin-right: 0;
+      }
+      .catogeries-head-right{
+          font-size: 12px;
+      }
+    }

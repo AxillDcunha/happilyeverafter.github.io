@@ -472,16 +472,27 @@ a{
 
 
   .logoutbtn{
-	  width: 100px;
+	  /* width: 100px; */
 	  padding-left: 5px;
 	  padding-right: 5px;
 	  background-color: pink;
-	  
+	  width: 160px;
   }
   .btn{
 	  border-style: none;
+	  
   }
 
+  .btnspsp {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    padding: 20px;
+    border-bottom: 1px solid rgb(231, 46, 119);
+    justify-content: space-around;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
   .btn-group .dropdown-menu .dropdown-item{
 	  width: 87%;
 	  border-style: none;

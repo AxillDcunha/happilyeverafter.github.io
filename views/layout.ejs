@@ -12,6 +12,7 @@
 	href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
 	integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
 	crossorigin="anonymous" />
+	<link rel="stylesheet" href="css/dashboard.css">
 	<link rel="stylesheet" href="css/login.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/review.css">
@@ -70,7 +71,7 @@
  					<ul class="menu-main">
 
 						<li class="menu-item-has-children">
-							<a href="#">Venues <i class="fa fa-angle-down"></i></a>
+							<a href="#">Venues</a>
 							<div class="sub-menu mega-menu mega-menu-column-4">
 							  <div class="list-item">
 									<h4 class="title">By Type</h4>
@@ -108,7 +109,7 @@
 
  						
 						<li class="menu-item-has-children">
-							<a href="#">Vendors <i class="bi bi-chevron-down"></i></a>
+							<a href="#">Vendors</a>
 							<div class="sub-menu mega-menu mega-menu-column-4">
 							  <div class="list-item">
 									
@@ -144,7 +145,7 @@
 
 						
 						<li class="menu-item-has-children">
-							<a href="#">Photos <i class="fa fa-angle-down"></i></a>
+							<a href="#">Photos </a>
 							<div class="sub-menu mega-menu mega-menu-column-4">
 								<div class="list-item text-center resiz-img">
 									<a href="#">
@@ -186,7 +187,7 @@
 							</div>
 						</li>
  						<li class="menu-item-has-children">
- 							<a href="#">Blog <i class="fas fa-angle-down"></i></a>
+ 							<a href="#">Blog </a>
  							<div class="sub-menu single-column-menu">
  								<ul>
  									<li><a href="#">Bridal Makeup</a></li>
@@ -212,7 +213,7 @@
 				<% if (req.isAuthenticated()) { %>
 
 					<div class="btn-group logoutbtn">
-						<button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						<button class="btn btn-secondary btn-sm dropdown-toggle btnspsp" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 							<%= user.userDisplayName %> 
 						</button>
 						<ul class="dropdown-menu">

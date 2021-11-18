@@ -88,7 +88,7 @@
                 <div class="catogeries-box-contant">
                     <div class="catogeries-box-text">
                         <div class="catogeries-box-text-sub">
-                            <div class="catogeries-box-text-1">Venues</div>
+                            <div class="catogeries-box-text-1">Photographer</div>
                             <div class="catogeries-box-text-2">Banquet Halls, Lawns / Farmhouses, Resorts, Small Function Halls, Destination Wedding, Kalyan Mandapam, 4 Star & Above Hotels</div>
 
                         </div>
@@ -114,7 +114,7 @@
                     <div class="catogeries-box-contant">
                         <div class="catogeries-box-text">
                             <div class="catogeries-box-text-sub">
-                                <div class="catogeries-box-text-1">Venues</div>
+                                <div class="catogeries-box-text-1">Makeup</div>
                                 <div class="catogeries-box-text-2">Banquet Halls, Lawns / Farmhouses, Resorts, Small Function Halls, Destination Wedding, Kalyan Mandapam, 4 Star & Above Hotels</div>
 
                             </div>
@@ -138,7 +138,7 @@
                     <div class="catogeries-box-contant">
                         <div class="catogeries-box-text">
                             <div class="catogeries-box-text-sub">
-                                <div class="catogeries-box-text-1">Venues</div>
+                                <div class="catogeries-box-text-1">Bridal Wear</div>
                                 <div class="catogeries-box-text-2">Banquet Halls, Lawns / Farmhouses, Resorts, Small Function Halls, Destination Wedding, Kalyan Mandapam, 4 Star & Above Hotels</div>
 
                             </div>
@@ -162,7 +162,7 @@
                     <div class="catogeries-box-contant">
                         <div class="catogeries-box-text">
                             <div class="catogeries-box-text-sub">
-                                <div class="catogeries-box-text-1">Venues</div>
+                                <div class="catogeries-box-text-1">Groom Wear</div>
                                 <div class="catogeries-box-text-2">Banquet Halls, Lawns / Farmhouses, Resorts, Small Function Halls, Destination Wedding, Kalyan Mandapam, 4 Star & Above Hotels</div>
 
                             </div>
@@ -185,7 +185,7 @@
                     <div class="catogeries-box-contant">
                         <div class="catogeries-box-text">
                             <div class="catogeries-box-text-sub">
-                                <div class="catogeries-box-text-1">Venues</div>
+                                <div class="catogeries-box-text-1">Music & Dance</div>
                                 <div class="catogeries-box-text-2">Banquet Halls, Lawns / Farmhouses, Resorts, Small Function Halls, Destination Wedding, Kalyan Mandapam, 4 Star & Above Hotels</div>
 
                             </div>
@@ -208,7 +208,7 @@
                     <div class="catogeries-box-contant">
                         <div class="catogeries-box-text">
                             <div class="catogeries-box-text-sub">
-                                <div class="catogeries-box-text-1">Venues</div>
+                                <div class="catogeries-box-text-1">Florist</div>
                                 <div class="catogeries-box-text-2">Banquet Halls, Lawns / Farmhouses, Resorts, Small Function Halls, Destination Wedding, Kalyan Mandapam, 4 Star & Above Hotels</div>
 
                             </div>
@@ -231,66 +231,41 @@
     </div>
 
 </div>
-
 <div class="hubslider-hubcad-home">
 
   <div class="catogeries-home-head">
-      <div class="catogeries-head-left catogeries-text">Wedding Categories</div>
-      <div class="catogeries-head-right catogeries-text">  </div>
+    <div class="catogeries-head-left catogeries-text">Wedding Categories</div>
+    <div class="catogeries-head-right catogeries-text"> </div>
   </div>
 
 
-<div class="hubslider owl-carousel">
-  <div class="hubcad">
-    <div class ="hubimg"><img src="img/photography.png" alt=""></div>
-    <div class="hubcontent">
-      <div class="hubtitle">Briana Tozour</div>
-      <div class="sub-hubtitle">Graphic Designer</div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
-      <div class="hubbtn">
-        <button>Read more</button>
-      </div>
-    </div>
+  <div class="hubslider owl-carousel">
+    <!-- this -->
+    <% vendor.forEach(vendor=> { %>
+      <% if (vendor.type==="photographer" ) { %>
+        <div class="hubcad">
+          <div class="hubimg"><img src="<%=vendor.img  %>" alt=""></div>
+          <div class="hubcontent">
+            <div class="hubtitle">
+              <%=vendor.name%>
+            </div>
+            <!-- <div class="sub-hubtitle">App Developer</div> -->
+            <p>
+              <%=vendor.description.slice(0,39)%>...
+            </p>
+            <div class="hubbtn">
+              <button>Read more</button>
+            </div>
+          </div>
+        </div>
+        <% } %>
+          <% }) %>
+
+            <!-- this -->
+
+            <!-- this  -->
   </div>
-  <div class="hubcad">
-    <div class ="hubimg"><img src="img/photography.png" alt=""></div>
-    <div class="hubcontent">
-      <div class="hubtitle">Pricilla Preez</div>
-      <div class="sub-hubtitle">Web Developer</div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
-      <div class="hubbtn">
-        <button>Read more</button>
-      </div>
-    </div>
-  </div>
-  <div class="hubcad">
-    <div class ="hubimg"><img src="img/photography.png" alt=""></div>
-    <div class="hubcontent">
-      <div class="hubtitle">Eliana Maia</div>
-      <div class="sub-hubtitle">App Developer</div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
-      <div class="hubbtn">
-        <button>Read more</button>
-      </div>
-    </div>
-  </div>
-  <!-- this -->
-  <div class="hubcad">
-    <div class ="hubimg"><img src="img/photography.png" alt=""></div>
-    <div class="hubcontent">
-      <div class="hubtitle">Eliana Maia</div>
-      <div class="sub-hubtitle">App Developer</div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit modi dolorem quis quae animi nihil minus sed unde voluptas cumque.</p>
-      <div class="hubbtn">
-        <button>Read more</button>
-      </div>
-    </div>
-  </div>
-  <!-- this  -->
 </div>
-</div>
-
-
 
 <script>
   $(".hubslider").owlCarousel({
@@ -298,6 +273,45 @@
     autoplay: true,
     autoplayTimeout: 2000, //2000ms = 2s;
     autoplayHoverPause: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        300:{
+            items:1,
+            nav:false
+        },
+        350:{
+            items:1,
+            nav:false
+        },
+        600:{
+            items:2,
+            nav:false,
+            
+        },
+        900:{
+            items:3,
+            nav:false
+        },
+       
+        1000:{
+            items:4,
+            nav:true,
+            loop:true
+        }
+      }
+    
+  });
+  $(".row").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000, //2000ms = 2s;
+    autoplayHoverPause: true,
+   
+    
   });
 </script>
   
