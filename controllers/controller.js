@@ -3,7 +3,7 @@ var vendor= require('../models/vendor');
 // create and save new user
 exports.create = (req,res)=>{
     // validate request
-    if(!req.body){
+    if(!req.body && req.user.usertype !==tr){
         res.status(400).send({ message : "Content can not be emtpy!"});
         return;
     }
@@ -13,7 +13,7 @@ exports.create = (req,res)=>{
         name : req.body.name,
         email : req.body.email,
         gender: req.body.gender,
-        status : req.body.status
+     
     })
 
     // save user in the database

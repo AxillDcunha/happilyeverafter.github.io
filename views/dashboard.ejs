@@ -11,8 +11,8 @@
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
+                        <th>NO</th>
                         <th>ID</th>
-                        <th>Name</th>
                         <th>Email</th>
                         <th>description</th>
                         <th>Brandname</th>
@@ -26,7 +26,7 @@
                             <td><%= i + 1 %></td>
                             <td><%=vendor[i].id %></td>
                             <td><%= vendor[i].username %></td>
-                            <td><%= vendor[i].description.slice(0,20)%></td>
+                            <td><%=vendor[i].description.slice(0,20)%></td>
                             <td><%= vendor[i].userDisplayName %></td>
                             <td><%= vendor[i].type %></td>
                             <td>

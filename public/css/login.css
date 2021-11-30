@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-  background: #ededed;
+  background: #ffffff;
 }
 
 input, button {
@@ -15,6 +15,13 @@ input, button {
   outline: none;
   background: none;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+.card{
+  background-color: #f5f2f1;
+}
+.card-title{
+  color: #215732;
+  font-weight: 600;
 }
 
 .tip {
@@ -232,7 +239,7 @@ label {
 
 label span {
   font-size: 12px;
-  color: #cfcfcf;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -250,19 +257,22 @@ input {
   margin-top: 15px;
   text-align: center;
   font-size: 12px;
-  color: #cfcfcf;
+  color: black;
 }
 
 .submit {
   margin-top: 40px;
   margin-bottom: 20px;
-  background: #ff4984;
+  background: #215732;
   text-transform: uppercase;
+}
+.form h2{
+ color: #9d2f2e;
 }
 
 .fb-btn {
   border: 2px solid #d3dae9;
-  color: #ff4984;
+  color: #9d2f2e;
   display: block;
   margin: 0 auto;
   width: 260px;
@@ -278,7 +288,7 @@ input {
 
 .fb-btn span {
   font-weight: bold;
-  color: #e223a9;
+  color: #215732;
 }
 
 .sign-in {

@@ -10,6 +10,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const controller = require("../controllers/controller");
+const services = require('./services');
 function initRoutes(app,User,Vendor) {
 
 
@@ -24,9 +25,14 @@ app.get("/", (req, res) => {
 
   // API work here
   app.get("/dashboard", (req, res) => {
-    Vendor.find().then(function(vendor) {
-      res.render("dashboard",{req:req,user:req.user,vendor:vendor});
-    })
+    if (req.isAuthenticated()&& req.user.usertype==true) {
+      Vendor.find().then(function(vendor) {
+        res.render("dashboard",{req:req,user:req.user,vendor:vendor});
+      })
+    } else {
+      res.redirect("/vendorlogin");
+    }
+    
     });
   
     app.get("/add_users", (req, res) => {
@@ -35,15 +41,7 @@ app.get("/", (req, res) => {
       })
       });
 
-      app.get("/update_user", (req, res) => {
-        Vendor.find().then(function(vendor) {
-          res.render("update_user",{req:req,user:req.user,vendor:vendor});
-        })
-        });
-
-
-
-
+      app.get('/update_user', services.update_user)
     //Api work up
 
   //CATEGORIES
@@ -252,3 +250,5 @@ app.get("/:id", async(req, res) => {
 }
 
 module.exports = initRoutes
+
+

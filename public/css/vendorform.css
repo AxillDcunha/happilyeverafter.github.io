@@ -20,7 +20,7 @@
   width: 55%;
   display: flex;
   justify-content: center;
-  background-color: #ffc0cb;
+  background-color: #f5f2f1;
  
 }
 .form-vendorform-right1{
@@ -33,6 +33,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  color: #9d2f2e;
 }
 
 .form-vendorform-right1 textarea{
@@ -67,10 +68,11 @@
 }
 .form-vendorform-right1 label{
   margin: 15px auto 0;
+ 
 }
 
 .input-vendor-form-submit{
-  background-color: #08d;
+  background-color: #215732;
   border-radius: 12px;
   border: 0;
   box-sizing: border-box;
