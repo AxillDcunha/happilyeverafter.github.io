@@ -64,3 +64,140 @@
     width: auto !important;
 
 }
+.photos-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.photos-gallery-sub{
+    width: 80%;
+}
+
+
+
+
+
+
+footer{
+    padding-top: 200px;
+}
+.website-footer-1 p{
+    margin-bottom: 0;
+}
+.website-footer-hr{
+    height: auto !important;
+    border: 1px solid #215732;
+    border-color: #215732;
+}
+
+
+.website-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.website-footer-sub{
+    width: 90%;
+    display: flex;
+}
+.website-footer-1{
+    width: 50%;
+    font-family: sans-serif;
+}
+.website-footer-1 p {
+    padding: 10px;
+    text-align: justify;
+}
+.footer-left-heading{
+    font-weight: 600;
+}
+.footer-left-subheading{
+    font-size: smaller;
+}
+.website-footer-left-bottom{
+    border: 2px dashed rgb(221, 57, 84);
+    border-radius: 10px;
+    margin: 10px;
+}
+.website-footer-left-bottom-sub{
+    display: flex;
+    justify-content: space-between;
+    font-size: small;
+}
+.website-footer-header-right{
+    font-size: small;
+    font-weight: 600;
+}
+.website-footer-email-submit{
+    margin-left: 20px;
+}
+.website-footer-email-submit input{
+    padding: 10px;
+    width: 500px;
+    border-radius: 7px;
+    border: 2px solid palevioletred;
+
+}
+.website-footer-email-submit input:focus{
+    
+    outline: none;
+}
+.website-footer-email-submit button{
+    padding: 13px;
+    width: 100px;
+    border: none;
+    background-color: rgb(236, 62, 91);
+    color: white;
+    font-size: small;
+    font-weight: 600;
+    border-radius: 7px;
+
+}
+.website-footer-email-submit button:hover{
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    border: 2px solid palevioletred;
+
+}
+.website-footer-social-account {
+    font-size: small;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.website-footer-contact-details-sub{
+    font-size: x-small;
+    font-weight: 500;
+    
+}
+.website-footer-contact-details{
+    font-size: small;
+    font-weight: 600;
+    
+    margin-left: 6px;
+}
+.website-footer-contact-details p{
+    padding: 5px;
+}
+.website-footer-final-buttons{
+    margin-left: 20px;
+}
+.website-footer-final-buttons button{
+    padding: 12px;
+    margin-right: 10px;
+    border: none;
+    background-color: rgb(255, 51, 119);
+    font-weight: 600;
+    color: #ffffff;
+    border-radius: 10px;
+
+}
+.website-footer-final-buttons button:hover{
+    padding: 10px;
+    border: 2px solid rgb(255, 51, 119);
+    background-color: white;
+    color: black;
+}
