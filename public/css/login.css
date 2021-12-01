@@ -70,7 +70,8 @@ input, button {
           transform: translate3d(-640px, 0, 0);
 }
 
-button {
+
+.logbutoon {
   display: block;
   margin: 0 auto;
   width: 260px;
@@ -243,7 +244,7 @@ label span {
   text-transform: uppercase;
 }
 
-input {
+.loginput {
   display: block;
   width: 100%;
   margin-top: 5px;
