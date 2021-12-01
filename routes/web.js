@@ -22,7 +22,12 @@ app.get("/", (req, res) => {
    
   });
   
-
+  app.get("/search", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("search",{req:req,user:req.user,vendor:vendor});
+    })
+     
+    });
   // API work here
   app.get("/dashboard", (req, res) => {
     if (req.isAuthenticated()&& req.user.usertype==true) {
