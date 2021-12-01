@@ -139,7 +139,7 @@ app.get("/banquethalls", function (req, res) {
   //gallery
   app.get("/outfits", (req, res) => {
     Vendor.find().then(function(vendor) {
-      res.render("outfits",{req:req,user:req.user,vendor:vendor});
+      res.render("gallery/outfits",{req:req,user:req.user,vendor:vendor});
     })
     });
 
