@@ -95,6 +95,7 @@ a{
 .header .item-right a .buttonMain{
 	background-color: #215732;
 	border: 0;
+	padding: 6px;
 
 	border-radius: 20px;
 	color: #ffffff;
@@ -480,20 +481,22 @@ a{
 	  padding-left: 5px;
 	  padding-right: 5px;
 	  background-color: #f5f2f1;
-	  width: 160px;
+	  width: auto;
   }
-  .btn{
+  .btn-log{
 	  border-style: none;
 	  
   }
 
   .btnspsp {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     -webkit-box-pack: justify;
-    padding: 20px;
-    
-    justify-content: space-around;
+    padding: 10px;
+	width: auto !important;
+	align-items: center;
+    border-radius: 10px;
+    justify-content: space-evenly;
     align-content: space-around;
     flex-wrap: wrap;
 }

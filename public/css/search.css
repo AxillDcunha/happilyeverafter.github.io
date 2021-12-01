@@ -3,6 +3,7 @@
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    margin-top: 50px;
 }
 .search-website-content{
     width: 80% !important;
@@ -25,7 +26,7 @@
 }
 .search-website-bar input{
     width:80% !important;
-    border: 2px dashed palevioletred !important;
+    border: 2px dashed #215732 !important;
     padding: 10px !important;
 
 }
@@ -38,7 +39,7 @@
     padding: 12px !important;
     outline: none !important;
     border: none !important;
-    background-color: palevioletred !important;
+    background-color: #215732 !important;
     font-weight: 600 !important;
     color: white !important;
 }
@@ -57,7 +58,7 @@
     padding: 8px !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
-    background-color: rgb(231, 142, 157) !important;
+    background-color: #215732 !important;
     font-size: medium !important;
     color: white !important;
     width: auto !important;
