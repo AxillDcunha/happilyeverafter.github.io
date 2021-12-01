@@ -27,7 +27,9 @@ const vendorSchema = new mongoose.Schema({
   },
 });
 
+
 const Vendor = new mongoose.model("Vendor", vendorSchema);
+vendorSchema.index({name:'text',userDisplayName: 'text',description:'text'});
 // Vendor.insertMany([
     
   

@@ -7,9 +7,10 @@
             <p>Search for vendors, ideas, real wedding stories and more!</p>
         </div>
         <div class="search-website-bar">
-            <form action="">
-            <input placeholder="search">
-            <button>Search</button>
+            
+            <form action="/searchnew" method="post">
+                      <input type="text"  name="newnew" />
+                    <button type="submit" >Search</button>
             </form>
         </div>
         <div class="search-website-popular">
@@ -17,7 +18,7 @@
                 <p>Popular Searches</p>
             </div>
             <div class="search-website-popular-searches">
-                <button>photographers</button>
+                <button method="get" action="/photographer">photographers</button>
                 <button>venues</button>
                 <button>honeymoon</button>
                 <button>trending ideas</button>

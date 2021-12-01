@@ -1,3 +1,4 @@
+const Vendor = require('../models/vendor');
 var vendor= require('../models/vendor');
 
 // create and save new user
@@ -104,3 +105,4 @@ exports.delete = (req, res)=>{
             });
         });
 }
+

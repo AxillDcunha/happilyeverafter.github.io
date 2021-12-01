@@ -23,9 +23,8 @@ app.get("/", (req, res) => {
   });
   
   app.get("/search", (req, res) => {
-    Vendor.find().then(function(vendor) {
-      res.render("search",{req:req,user:req.user,vendor:vendor});
-    })
+   
+      res.render("search",{req:req,user:req.user});
      
     });
   // API work here
@@ -235,6 +234,7 @@ app.post('/api/users', controller.create);
 app.get('/api/users', controller.find);
 app.put('/api/users/:id', controller.update);
 app.delete('/api/users/:id', controller.delete);
+
 
 
 app.get("/:id", async(req, res) => {

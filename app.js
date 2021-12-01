@@ -256,6 +256,25 @@ app.post("/vendorinfo", function (req, res) {
   });
 
 });
+
+app.post("/searchnew",async (req,res)=>{
+    try {
+        let searchterm=req.body.newnew;
+        
+        let vendor=await Vendor.find({$text:{ $search: searchterm , $diacriticSensitive:true}}).then(function(vendor) {
+          res.render("searchdisp",{req:req,user:req.user,vendor:vendor});
+        })
+        // throw new Error("We have Trooouble:)")
+    } catch (error) {
+       console.log(error)
+    }
+  
+    
+  });
+
+
+
+
 //Listening on port 3000
 app.listen(port, () => {
   console.log(`sever started on port ${port}`);
