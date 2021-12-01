@@ -136,7 +136,12 @@ app.get("/banquethalls", function (req, res) {
     res.render("venues/lawns",{req:req,user:req.user});
   });
 
-  
+  //gallery
+  app.get("/outfits", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("outfits",{req:req,user:req.user,vendor:vendor});
+    })
+    });
 
 //vendors
 app.get("/vendors", function (req, res) {
