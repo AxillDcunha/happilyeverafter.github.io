@@ -282,9 +282,6 @@ app.post("/searchnew",async (req,res)=>{
     
   });
 
-
-
-
 //Listening on port 3000
 app.listen(port, () => {
   console.log(`sever started on port ${port}`);

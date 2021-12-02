@@ -169,7 +169,11 @@ app.get("/banquethalls", function (req, res) {
       res.render("blog",{req:req,user:req.user,vendor:vendor});
     })
   });
-
+  app.get("/blogupdate", function (req, res) {
+    Vendor.find().then(function(vendor) {
+      res.render("blog_update",{req:req,user:req.user,vendor:vendor});
+    })
+  });
   //gallery
   app.get("/outfits", (req, res) => {
     Vendor.find().then(function(vendor) {
@@ -316,7 +320,13 @@ app.delete('/api/users/:id', controller.delete);
 
 app.get("/:id", async(req, res) => {
   try {
-    
+    if (req.query.blog) {
+      let vid= req.params.id
+    const foo =await Vendor.findById(vid).then(function(vendor) {
+      res.render("blog_detail",{req:req,user:req.user,vendor:vendor});
+    })
+    throw new Error("We have Trooouble:)")
+    }
     let vid= req.params.id
     const foo =await Vendor.findById(vid).then(function(vendor) {
       res.render("vendor_form",{req:req,user:req.user,vendor:vendor});

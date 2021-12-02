@@ -1,187 +1,164 @@
-.selhed{
-    padding: 50px 140px;
-    text-align: center;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.review-website-vendors-main{
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.h4{
-    font-size: 22px;
-    font-weight: 400;
-}
-.h6{
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 400;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.review-website-vendors-main-sub{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
-.review-area{
+.review-website-vendors-main-heading{
+  font-size: larger;
+  font-weight: 600;
+}
+.review-website-vendors-main-sub form{
+  margin-top: 30px;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.vhead{
-  display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
+.review-vendor-name{
+  width: 80%;
 }
-.vhead1{
- display: flex;
- flex-direction: column;
-    padding-bottom: 20px; 
+.review-vendor-name input{
+  border: 2px solid #215732;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
 
 }
-.head{
-  margin: 0px;
-    font-size: 16px;
-    font-weight: 600;
+.review-vendor-name label{
+  text-align: left;
+  margin: 0;
+  font-weight: 600;
+  margin-left: 20px;
 }
- .review-box{
-  min-width: 60%;
-  display: block;
-    padding: 20px 45px;
-    margin-top: -30px;
-
-} 
-
-.vendor-textbox{
-position: relative;
-flex: 1 1;
-align-self: stretch;
-flex-direction: column;
-justify-content: center;
-font-weight: 400;
-position: relative;
-}
-.vbox{
-  height: 50px;
-      -webkit-box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%), 0 0 0 1px rgb(0 0 0 / 10%);
-      box-shadow: 0 0 2px 0 rgb(0 0 0 / 10%), 0 0 0 1px rgb(0 0 0 / 10%);
-      padding: 9px 10px;
-      width: 100%;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-item-align: stretch;
-      align-self: stretch;
-      border: 0 solid #d7d7d7;
-}
-.boxx{
-  font-size: 15px;
-  font-weight: 400;
-  background-color: white;
-}
-.rating-text{
-  margin: 0px;
-    padding-top: 20px;
-    font-size: 16px;
-    font-weight: 600;
-}
-.rate{
-  display:flex;
-  align-content: center;
-  justify-content: space-between;
-  position: relative;
-    margin-top: 20px;
-}
-.rater{
-  display: flex;
-  height: 20px;
-  align-content: center;
-  flex-direction: row;
-}
-.rater1{
-  display: flex;
-  height: 20px;
-  align-items: center;
-}
- .rater2{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} 
-.spann{
-    z-index: 3;
-    width: 95%;
-    position: absolute;
-    height: 100%;
-}
-.rate-box{
-  background: white;
-    border: 1px solid rgb(215, 215, 215);
-    align-self: center;
-    height: 20px;
-    width: 20px;
-    background-color: #d7d7d7;
-    margin-right: 10px;
-    border-radius: 2px;
-    cursor: pointer;
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-.rate-text{
-  text-align: right;
-}
- .feedback{
-  font-family: sans-serif;
-} 
- .checkb{
-  padding-right: 4px;
-} 
-.text-box{
-  position: relative;
+.review-vendor-description-page{
+  width: 80%;
   margin-top: 20px;
 }
-.text{
-  display: flex;
-    height: 170px;
-    border: 1px solid #d7d7d7;
-    border-radius: 2px;
-    width: 100%;
-    padding: 10px;
+.review-vendor-description-page label{
+  text-align: left;
+  margin: 0;
+  font-weight: 600;
+  margin-left: 20px;
+
 }
-.spent{
-  height: 50px;
-    line-height: 50px;
-    border-radius: 2px;
-    border: 1px solid #d7d7d7;
-    margin-top: 20px;
-    width: 100%;
-    padding: 10px;
+.review-vendor-description-page textarea{
+  border: 2px solid #215732;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+
 }
-.buttongen{
-  margin-top: 20px;
-  display: flex;
-    -webkit-box-pack: end;
-    justify-content: flex-end;
+
+.review-vendor-submit-button{
+  margin-top: 30px;
+  
+
 }
-.button1{
-border: 1px solid #d7d7d7;
-width: 120px;
-height: 40px;
-cursor: pointer;
-margin-right: 20px;
-font-size: 16px;
-font-weight: 400;
-display: flex;
-align-items: center;
-justify-content: center;
+.review-vendor-submit-button button{
+  padding: 12px 22px 12px 22px;
+  background-color: #215732;
+  color: white;
+  border-radius: 10px;
+
 }
-.button2{
- 
-height: 40px;
-width: 150px;
-border-radius: 2px;
-cursor: pointer;
-background-color: #e72e77;
-color: #fff;
-font-size: 16px;
-font-weight: 400;
-display: flex;
-align-items: center;
-justify-content: center;
+.review-vendor-submit-button button:hover{
+  padding: 10px 20px 10px 20px;
+  background-color: #ffffff;
+  color: #215732;
+  border-radius: 10px;
+  border: 2px solid #215732;
+
 }
+
+.review-vendor-rating {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.review-vendor-rating:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.review-vendor-rating:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.review-vendor-rating:not(:checked) > label:before {
+  content: '★ ';
+}
+.review-vendor-rating > input:checked ~ label {
+  color: #ffc700;    
+}
+.review-vendor-rating:not(:checked) > label:hover,
+.review-vendor-rating:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.review-vendor-rating > input:checked + label:hover,
+.review-vendor-rating > input:checked + label:hover ~ label,
+.review-vendor-rating > input:checked ~ label:hover,
+.review-vendor-rating > input:checked ~ label:hover ~ label,
+.review-vendor-rating > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .catogeries-home{
   width: 100%;
