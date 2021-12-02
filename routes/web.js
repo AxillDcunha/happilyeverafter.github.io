@@ -170,6 +170,31 @@ app.get("/banquethalls", function (req, res) {
       res.render("gallery/outfits",{req:req,user:req.user,vendor:vendor});
     })
     });
+    app.get("/accessories", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/accessories",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_card", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_card",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_mendhi", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_mendhi",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_decor", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_decor",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_photography", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_photography",{req:req,user:req.user,vendor:vendor});
+    })
+    });
 
 //vendors
 app.get("/vendors", function (req, res) {
