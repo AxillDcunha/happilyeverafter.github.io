@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
     });
   // API work here
   app.get("/dashboard", (req, res) => {
-    if (req.isAuthenticated()&& req.user.usertype==true) {
+    if (req.isAuthenticated()&& req.user.isAdmin==true) {
       Vendor.find().then(function(vendor) {
         res.render("dashboard",{req:req,user:req.user,vendor:vendor});
       })
@@ -89,7 +89,7 @@ app.get("/review", function (req, res) {
   
   
   app.get("/vendorform", function (req, res) {
-    if (req.isAuthenticated() && req.user.usertype === true) {
+    if (req.isAuthenticated() && req.user.isVendor === true) {
       res.render("vendorform",{req:req,user:req.user});
     } else {
       res.redirect("/vendorlogin");
