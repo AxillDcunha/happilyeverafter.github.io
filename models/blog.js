@@ -4,30 +4,19 @@ const vendorSchema = new mongoose.Schema({
     type:String,
     // unique:true
   },
-  userDisplayName: String,
-  description: {
-    type: String,
-    // required: true
-  },
-  name: {
-    type: String,
-    // required: true
-  },
   img: {
+    type: [],
+    // required: true
+  },
+  title: {
     type: String,
     // required: true
   },
-  price: {
-    type: Number,
+  description: {
+    type: [],
     // required: true
   },
-  type: {
-    type: String,
-    // required: true
-  },
-  location:{
-    type:String,
-  },
+ 
 });
 
 
