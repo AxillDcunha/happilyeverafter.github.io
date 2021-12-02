@@ -98,42 +98,64 @@ app.get("/review", function (req, res) {
   });
 //venues
 app.get("/banquethalls", function (req, res) {
-    res.render("venues/banquethalls",{req:req,user:req.user});
+  Vendor.find().then(function(vendor) {
+      res.render("venues/banquethalls",{req:req,user:req.user,vendor:vendor});
+    })
   });
   app.get("/chennai", function (req, res) {
-    res.render("venues/chennai",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/chennai",{req:req,user:req.user,vendor:vendor});
+    })
   });
   app.get("/hotels", function (req, res) {
-    res.render("venues/hotels",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/hotels",{req:req,user:req.user,vendor:vendor});
+    })
   });
   app.get("/destinationwedding", function (req, res) {
-    res.render("venues/destinationwedding",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/destinationwedding",{req:req,user:req.user,vendor:vendor});
+    })
   });
   
   app.get("/delhi", function (req, res) {
-    res.render("venues/delhi",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/delhi",{req:req,user:req.user,vendor:vendor});
+    })
   });
   
   app.get("/resorts", function (req, res) {
-    res.render("venues/resorts",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/resorts",{req:req,user:req.user,vendor:vendor});
+    })
   });
   
   app.get("/pune", function (req, res) {
-    res.render("venues/pune",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/pune",{req:req,user:req.user,vendor:vendor});
+    })
   });
   
   app.get("/mumbai", function (req, res) {
-    res.render("venues/mumbai",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/mumbai",{req:req,user:req.user,vendor:vendor});
+    })
   });
   
   app.get("/hyderabad", function (req, res) {
-    res.render("venues/hyderabad",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/hyderabad",{req:req,user:req.user,vendor:vendor});
+    })
   });
   app.get("/kolkata", function (req, res) {
-    res.render("venues/kolkata",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/kolkata",{req:req,user:req.user,vendor:vendor});
+    })
   });
   app.get("/lawns", function (req, res) {
-    res.render("venues/lawns",{req:req,user:req.user});
+    Vendor.find().then(function(vendor) {
+      res.render("venues/lawns",{req:req,user:req.user,vendor:vendor});
+    })
   });
 
   //gallery

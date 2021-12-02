@@ -4,7 +4,7 @@ var vendor= require('../models/vendor');
 // create and save new user
 exports.create = (req,res)=>{
     // validate request
-    if(!req.body && req.user.usertype !==tr){
+    if(!req.body){
         res.status(400).send({ message : "Content can not be emtpy!"});
         return;
     }
@@ -34,7 +34,7 @@ exports.create = (req,res)=>{
 
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
-
+    
     if(req.query.id){
         const id = req.query.id;
 
@@ -50,7 +50,8 @@ exports.find = (req, res)=>{
                 res.status(500).send({ message: "Erro retrieving user with id " + id})
             })
 
-    }else{
+    }
+    else{
         vendor.find()
             .then(user => {
                 res.send(user)
@@ -59,7 +60,7 @@ exports.find = (req, res)=>{
                 res.status(500).send({ message : err.message || "Error Occurred while retriving user information" })
             })
     }
-
+    
     
 }
 
@@ -72,6 +73,7 @@ exports.update = (req, res)=>{
     }
 
     const id = req.params.id;
+    const uid = req.params.id;
     vendor.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
             if(!data){
