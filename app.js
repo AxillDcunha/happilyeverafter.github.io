@@ -56,8 +56,16 @@ const userSchema = new mongoose.Schema({
   password: String,
   googleId: String,
   userDisplayName: String,
-  usertype:{
-      type: Boolean,
+  // usertype:{
+  //     type: Boolean,
+  //     default:false
+  // },
+  isAdmin:{
+    type: Boolean,
+      default:false
+  },
+  isVendor:{
+    type: Boolean,
       default:false
   },
   vendorinfo:{
@@ -194,7 +202,8 @@ app.post("/vendorlogin", function (req, res) {
   const user = new User({
     username: req.body.username,
     password: req.body.password,
-    usertype:true
+    // usertype:true
+    // isVendor:true
   });
 
   req.login(user, function (err) {
@@ -215,7 +224,7 @@ app.post("/vendorlogin", function (req, res) {
 // user registeration form
 app.post("/vendorregister", function (req, res) {
   User.register(
-    { username: req.body.username, userDisplayName: req.body.Uname,usertype:true },
+    { username: req.body.username, userDisplayName: req.body.Uname,isVendor:true },
     req.body.password,
     function (err, user) {
       if (err) {

@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
     });
   // API work here
   app.get("/dashboard", (req, res) => {
-    if (req.isAuthenticated()&& req.user.usertype==true) {
+    if (req.isAuthenticated()&& req.user.isAdmin==true) {
       Vendor.find().then(function(vendor) {
         res.render("dashboard",{req:req,user:req.user,vendor:vendor});
       })
@@ -89,7 +89,7 @@ app.get("/review", function (req, res) {
   
   
   app.get("/vendorform", function (req, res) {
-    if (req.isAuthenticated() && req.user.usertype === true) {
+    if (req.isAuthenticated() && req.user.isVendor === true) {
       res.render("vendorform",{req:req,user:req.user});
     } else {
       res.redirect("/vendorlogin");
@@ -174,6 +174,31 @@ app.get("/banquethalls", function (req, res) {
   app.get("/outfits", (req, res) => {
     Vendor.find().then(function(vendor) {
       res.render("gallery/outfits",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/accessories", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/accessories",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_card", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_card",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_mendhi", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_mendhi",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_decor", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_decor",{req:req,user:req.user,vendor:vendor});
+    })
+    });
+    app.get("/gallery_photography", (req, res) => {
+    Vendor.find().then(function(vendor) {
+      res.render("gallery/gallery_photography",{req:req,user:req.user,vendor:vendor});
     })
     });
 
