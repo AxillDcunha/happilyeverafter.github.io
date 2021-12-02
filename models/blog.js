@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const vendorSchema = new mongoose.Schema({
+const BlogSchema = new mongoose.Schema({
   username:{
     type:String,
     // unique:true
@@ -20,8 +20,8 @@ const vendorSchema = new mongoose.Schema({
 });
 
 
-const Blog = new mongoose.model("Vendor", vendorSchema);
+const Blog = new mongoose.model("Blog", BlogSchema);
 
 
-module.exports= Vendor
+module.exports= Blog
 

@@ -13,6 +13,7 @@ const findOrCreate = require("mongoose-findorcreate");
 const vendor=require("./models/vendor");
 const Vendor = require("./models/vendor");
 const Gallery = require("./models/gallery");
+const Blog = require("./models/blog");
 //Port 
 const port = process.env.port || 3000;
 
@@ -282,6 +283,30 @@ app.post("/searchnew",async (req,res)=>{
     
   });
 
+
+  app.post("/blog",async (req,res)=>{
+    Blog.insertMany([
+  
+      {
+        
+        "title" : req.body.title,
+        "username" :req.body.username,
+        "description" : [req.body.description1,req.body.description2,req.body.description3,req.body.description4],
+        "img" : [req.body.photo1,req.body.photo2,req.body.photo3],
+
+        "__v" : 0
+    }
+    ]).then(function(){
+      console.log("Data inserted")  // Success
+      res.redirect("/");
+    }).catch(function(error){
+      console.log(error)      // Failure
+    });
+   
+
+  
+    
+  });
 //Listening on port 3000
 app.listen(port, () => {
   console.log(`sever started on port ${port}`);
