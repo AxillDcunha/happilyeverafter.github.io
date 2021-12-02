@@ -118,7 +118,7 @@ footer{
     font-size: smaller;
 }
 .website-footer-left-bottom{
-    border: 2px dashed rgb(221, 57, 84);
+    border: 2px dashed #215732;
     border-radius: 10px;
     margin: 10px;
 }
@@ -138,7 +138,7 @@ footer{
     padding: 10px;
     width: 500px;
     border-radius: 7px;
-    border: 2px solid palevioletred;
+    border: 2px solid #215732;
 
 }
 .website-footer-email-submit input:focus{
@@ -149,7 +149,7 @@ footer{
     padding: 13px;
     width: 100px;
     border: none;
-    background-color: rgb(236, 62, 91);
+    background-color: #215732;
     color: white;
     font-size: small;
     font-weight: 600;
@@ -160,7 +160,7 @@ footer{
     background-color: #ffffff;
     color: black;
     padding: 10px;
-    border: 2px solid palevioletred;
+    border: 2px solid #215732;
 
 }
 .website-footer-social-account {
@@ -189,7 +189,7 @@ footer{
     padding: 12px;
     margin-right: 10px;
     border: none;
-    background-color: rgb(255, 51, 119);
+    background-color: #215732;
     font-weight: 600;
     color: #ffffff;
     border-radius: 10px;
@@ -197,7 +197,7 @@ footer{
 }
 .website-footer-final-buttons button:hover{
     padding: 10px;
-    border: 2px solid rgb(255, 51, 119);
+    border: 2px solid #215732;
     background-color: white;
     color: black;
 }

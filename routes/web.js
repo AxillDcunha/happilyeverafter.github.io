@@ -164,6 +164,12 @@ app.get("/banquethalls", function (req, res) {
     })
   });
 
+  app.get("/blog", function (req, res) {
+    Vendor.find().then(function(vendor) {
+      res.render("blog",{req:req,user:req.user,vendor:vendor});
+    })
+  });
+
   //gallery
   app.get("/outfits", (req, res) => {
     Vendor.find().then(function(vendor) {
