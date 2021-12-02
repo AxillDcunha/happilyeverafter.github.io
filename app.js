@@ -12,6 +12,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const vendor=require("./models/vendor");
 const Vendor = require("./models/vendor");
+const Gallery = require("./models/gallery");
 //Port 
 const port = process.env.port || 3000;
 
