@@ -22,6 +22,7 @@ console.log(data);
 
     $.ajax(request).done(function(response){
         alert("Data Updated Successfully!");
+
     })
 
 })

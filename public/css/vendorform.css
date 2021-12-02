@@ -13,14 +13,25 @@
 
 }
 .form-vendorform-left {
-  width: 45%;
+  width: 50%;
+  border-radius: 20px 0px 0px 20px;
+  border: 2px dashed #215732;
+  border-right: none;
+  
+}
+.update-user-haeding-1-0{
+  color: white;
+  border-top: 2px dashed #215732; border-bottom: 2px dashed #215732 ;
   
 }
 .form-vendorform-right{
-  width: 55%;
+  width: 50%;
   display: flex;
   justify-content: center;
   background-color: #f5f2f1;
+  border: 2px dashed #215732;
+  border-left: none;
+  border-radius: 0px 20px 20px 0px;
  
 }
 .form-vendorform-right1{
@@ -33,7 +44,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  color: #9d2f2e;
+  color: #215732;
 }
 
 .form-vendorform-right1 textarea{
@@ -52,12 +63,13 @@
 
 .form-vendorform-left img{
   width: 100%;
+  border-radius: 20px 0px 0px 20px;
 }
 
 .input-vendor-form{
   background-color: #ffffff;
   border-radius: 12px;
-  border: 0;
+  border: 2px solid #215732;
   box-sizing: border-box;
   color: rgb(0, 0, 0);
   font-size: 18px;
@@ -68,6 +80,8 @@
 }
 .form-vendorform-right1 label{
   margin: 15px auto 0;
+  color: #215732;
+  font-weight: 600;
  
 }
 
@@ -84,4 +98,13 @@
   outline: 0;
   text-align: center;
   width: 60%;
+}
+
+
+
+
+.update-user-submit-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

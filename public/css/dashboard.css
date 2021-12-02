@@ -3,7 +3,7 @@
 :root{
     --dark: #215732;
     --light: #adb5bd;
-    --border: #dee2e6;
+    --border: #215732;
     --border-btn: #edf2f4;
 }
 /* 
@@ -17,7 +17,27 @@ a {
     text-decoration: none;
     font-family: 'PT Sans', sans-serif;
 } */
-
+.dashboard-heading-main{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-heading-main-sub{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dashboard-heading-main-sub p{
+    font-size: x-large;
+    font-weight: 700;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #215732;
+    margin: 20px;
+}
 .containerdash{
     max-width: 1024px;
     margin: auto;
@@ -29,8 +49,15 @@ a {
 }
 
 .d-flex{
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+}
+.d-flex a{
+    text-decoration: none;
+}
+.d-flex svg{
+    fill: #215732;
 }
 
 .justify-between{
@@ -59,10 +86,11 @@ a {
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #215732;
+    font-size: medium;
+    font-weight: 600;
+    
+    
 }
 
 #header nav{
@@ -72,7 +100,7 @@ a {
 }
 
 #site-main{
-    margin-top: 6em;
+    margin-top: 3em;
     font-family: 'Barlow', sans-serif;
 }
 
@@ -88,14 +116,19 @@ a {
 table{
     border-spacing: 0px;
     width: 100%;
+    
+
 }
 
 .table td, .table th{
     padding: .75em;
     vertical-align: top;
     text-align: center;
-    border-top: 1px solid var(--border);
+    
+    border: 3px solid #043113;
+
 }
+
 
 .table td > a.btn{
     padding: .3em 1em;
@@ -114,7 +147,7 @@ table{
 .table .thead-dark th{
     color: #fff;
     background-color: var(--dark) ;
-    border-color: #32383e;
+    /* border-color: #32383e; */
 }
 
 @media only screen and (max-width: 1024px){
@@ -147,86 +180,163 @@ table{
 }
 
 .new_user{
-    max-width: 786px;
+    max-width: 700px;
     margin: auto;
 }
-
-#update_user .form-group,
-#add_user .form-group{
-    margin: .4em 0;
+.from-group-container label{
+    font-weight: 600;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    margin-left:30px ;
+    text-align: left !important;
+    
 }
-
-#update_user .form-group input[type="text"],
-#add_user .form-group input[type="text"]{
+.from-group-container input{
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #043113;
     width: 100%;
-    padding: .6em 1em;
-    margin: .5em 0;
-    border: 1px solid var(--border);
-    font-family: 'Barlow', sans-serif;
-    font-size: 1em;
-    border-radius: .2em;
+    margin-top: 5px;
+}
+.form-group-radio{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-#update_user .form-group .radio,
-#add_user .form-group .radio{
-    margin: 1em 2em;
-}
+
 
 /* adding style to radio buttons */
-.radio input[type='radio']{
-    position: absolute;
-    opacity: 0;
-}
 
-.radio input[type='radio'] + .radio-label:before{
-    content: "";
-    background: var(--border-btn);
-    border-radius: 100%;
-    border: 1px solid black;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    position: relative;
-    top: -0em;
-    margin-right: .5em;
-    vertical-align: top;
-    cursor: pointer;
-    text-align: center;
-    -webkit-transition: all 250ms ease;
-    transition: all 250ms ease;
+.filter-newuser a{
+    text-decoration: none;
+    color: #043113;
+    font-size: medium;
+    font-weight: 600;
 }
-
-.radio input[type='radio']:checked + .radio-label:before{
-    background-color: #16db93;
-    box-shadow: inset 0 0 0 4px #e9ecef;
+.adduser-radio-inline{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
 }
-
-.radio input[type='radio']:focus + .radio-label:before{
-    outline: none;
-    border-color:#16db93;
+.adduser-radio-inline label{
+    display: inline !important;
+    width: auto !important;
+    margin:0px;
+    margin-right: 100px;
 }
-
-.radio input[type='radio']:disabled + .radio-label:before{
-    box-shadow: inset 0 0 0 4px #e9ecef;
-    border-color: #b4b4b4;
-    background: #b4b4b4;
+.adduser-radio-inline input{
+    margin-left:150px ;
+    
 }
+.text-dark{
+    font-size: large;
+    font-weight: 600;
 
-#update_user .form-group .btn,
-#add_user .form-group .btn{
+
+}
+.adduser-submit-button{
     width: 100%;
-    padding: .9em 1em;
-    background-color:#16db93; 
-    border: none;
-    font-family: 'PT Sans', sans-serif;
-    font-size: 1em;
-    cursor: pointer;
-    border-radius: .2em;
-    margin: .5em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.adduser-submit-button button{
+    padding: 12px 22px 12px 22px;
+    background-color: #215732;
+    color: white;
+    border-radius: 10px;
+}
+.adduser-submit-button button:hover{
+    padding: 10px 20px 10px 20px;
+    background-color: white;
+    color: #043113;
+    border: 2px solid #043113;
+
+
 }
 
-#update_user .form-group .btn:hover,
-#add_user .form-group .btn:hover{
-    background-color: var(--dark);
-    color: var(--border);
+
+
+
+
+
+.filter-menu-main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
 }
+.filter-menu-sub-main{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.filter-menu-opt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+/* menu filter-page-dropdown */
+.filter-page-dropbtn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the filter-page-dropdown content */
+  .filter-page-dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .filter-page-drop-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    
+    z-index: 1;
+  }
+  
+  /* Links inside the filter-page-dropdown */
+  .filter-page-drop-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of filter-page-dropdown links on hover */
+  .filter-page-drop-content a:hover {background-color: #dbdbdb}
+  
+  /* Show the filter-page-dropdown menu on hover */
+  .filter-page-dropdown:hover .filter-page-drop-content {
+    display: block;
+  }
+  
+ 
+  
+
+
+
+
+
+
+

@@ -141,6 +141,12 @@ app.get("/banquethalls", function (req, res) {
       res.render("venues/mumbai",{req:req,user:req.user,vendor:vendor});
     })
   });
+
+  app.get("/subscribe", function (req, res) {
+    Vendor.find().then(function(vendor) {
+      res.render("subscribe",{req:req,user:req.user,vendor:vendor});
+    })
+  });
   
   app.get("/hyderabad", function (req, res) {
     Vendor.find().then(function(vendor) {
@@ -254,7 +260,20 @@ app.get("/vendors", function (req, res) {
       
     })
   });
-  
+  app.get("/sort", function (req, res) {
+    let cat=req.query.categories;
+    Vendor.find({"type":cat}).sort({"price":-1}).then(function(vendor) {
+      res.render("sort",{req:req,user:req.user,vendor:vendor});
+
+    })
+  });
+  app.get("/sortd", function (req, res) {
+    let cat=req.query.categories;
+    Vendor.find({"type":cat}).sort({"price":1}).then(function(vendor) {
+      res.render("sort",{req:req,user:req.user,vendor:vendor});
+
+    })
+  });
  
   // API
 app.post('/api/users', controller.create);
