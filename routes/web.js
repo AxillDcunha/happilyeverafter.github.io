@@ -255,6 +255,13 @@ app.get("/vendors", function (req, res) {
     })
   });
   
+  //SORTING
+  app.get("/sort", function (req, res) {
+    Vendor.find().sort({"price":1}).then(function(vendor) {
+      res.render("searchdisp",{req:req,user:req.user,vendor:vendor});
+      
+    })
+  });
  
   // API
 app.post('/api/users', controller.create);
