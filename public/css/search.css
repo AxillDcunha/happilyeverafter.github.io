@@ -11,7 +11,7 @@
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    font-family: sans-serif !important;
+    font-family: 'Roboto Slab', serif !important;
 }
 .search-website-header{
     font-size: 25px !important;
@@ -81,7 +81,9 @@
 
 
 footer{
-    padding-top: 200px;
+    font-weight: 600;
+    padding-top: 0px;
+    font-family: 'Roboto Slab', serif;
 }
 .website-footer-1 p{
     margin-bottom: 0;
@@ -104,15 +106,19 @@ footer{
     display: flex;
 }
 .website-footer-1{
-    width: 50%;
-    font-family: sans-serif;
+    width: 60%;
+    
+}
+.website-footer-2{
+    width: 40%;
+    
 }
 .website-footer-1 p {
     padding: 10px;
     text-align: justify;
 }
 .footer-left-heading{
-    font-weight: 600;
+    font-weight: 800;
 }
 .footer-left-subheading{
     font-size: smaller;
@@ -130,13 +136,14 @@ footer{
 .website-footer-header-right{
     font-size: small;
     font-weight: 600;
+    margin-left: 20px;
 }
 .website-footer-email-submit{
     margin-left: 20px;
 }
 .website-footer-email-submit input{
     padding: 10px;
-    width: 500px;
+    width: 380px;
     border-radius: 7px;
     border: 2px solid #215732;
 
@@ -167,20 +174,22 @@ footer{
     font-size: small;
     font-weight: 600;
     margin-top: 10px;
+    margin-left: 20px;
 }
 .website-footer-contact-details-sub{
-    font-size: x-small;
-    font-weight: 500;
+    font-size: small;
+    font-weight: 700;
     
 }
 .website-footer-contact-details{
     font-size: small;
     font-weight: 600;
-    
-    margin-left: 6px;
+    margin-bottom: 15px;
+    margin-left: 20px;
 }
 .website-footer-contact-details p{
-    padding: 5px;
+    margin-bottom: 5px;
+    
 }
 .website-footer-final-buttons{
     margin-left: 20px;

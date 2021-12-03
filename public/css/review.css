@@ -176,10 +176,12 @@
   align-items: center;
   margin: 30px;
   
+  
 }
 .catogeries-text{
   font-size: larger;
-  font-family: sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
   color: black;
   
 }
@@ -237,9 +239,9 @@
 .catogeries-box-text-1{
   white-space: pre-wrap;
   text-align: left;
-  font-family: sans-serif;
+  font-family: 'Roboto Slab', serif;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   color: black;
 }
 .catogeries-box-text-2{
@@ -248,7 +250,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   text-align: left;
-  font-family: sans-serif;
+  font-family: 'Roboto Slab', serif;
   color: black;
 
 }
