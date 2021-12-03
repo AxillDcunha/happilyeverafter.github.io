@@ -1,37 +1,4 @@
-<div class="filter-menu-main">
-  <div class="filter-menu-sub-main">
-      <div class="filter-menu-opt">
-      <div class="filter-page-dropdown">
-          <button class="filter-page-dropbtn">Price</button>
-          <div class="filter-page-drop-content">
-            <a href="/sortd?categories=photographer">Low to High</a>
-            <a href="/sort?categories=photographer">High to Low</a>
-            
-          </div>
-      </div>
-      <div class="filter-page-dropdown">
-          <button class="filter-page-dropbtn">Filter</button>
-          <div class="filter-page-drop-content">
-            <a href="#">Popular</a>
-            <a href="#">Rating</a>
-          </div>
-      </div>
-      <div class="filter-page-dropdown">
-          <button class="filter-page-dropbtn">Location</button>
-          <div class="filter-page-drop-content">
-            <a href="#">Mumbai</a>
-            <a href="#">Pune</a>
-            <a href="#">Thane</a>
-          </div>
-      </div>
-      </div>
-
-      
-
-      
-  </div>
-  
-</div>
+<%- include('../sortnav'); -%>
 <div class="row row-cols-1 row-cols-md-4 g-4 p-5">
    <% vendor.forEach(vendor => { %>
     <% if (vendor.type==="photographer") { %>
@@ -45,7 +12,7 @@
             <div class="card-p-l">
 
             <p class="card-text">₹ <%=vendor.price%></p>
-            <p class="card-text">Location</p>
+            <p class="card-text"><%=vendor.location%></p>
 
             </div>
           </div>

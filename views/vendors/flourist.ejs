@@ -1,23 +1,24 @@
+<%- include('../sortnav'); -%>
 <div class="row row-cols-1 row-cols-md-4 g-4 p-5">
-  <% vendor.forEach(vendor => { %>
-   <% if (vendor.type==="flourist") { %>
-     <div class="col">
-       <div class="card">
-         <a href="/">
-         <img src="<%=vendor.img  %>" class="card-img-top" alt="...">
-         <div class="card-body">
-           <h5 class="card-title"><%=vendor.name%></h5>
-           <p class="card-text"><%=vendor.description.slice(0,100)%></p>
-           <div class="card-p-l">
+   <% vendor.forEach(vendor => { %>
+    <% if (vendor.type==="flourist") { %>
+      <div class="col">
+        <div class="card">
+          <a href="/<%=vendor._id%>">
+          <img src="<%=vendor.img  %>" class="card-img-top img-fluid"  alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%=vendor.name%></h5>
+            <p class="card-text"><%=vendor.description.slice(0,99)%>...</p>
+            <div class="card-p-l">
 
-           <p class="card-text">₹ <%=vendor.price%></p>
-           <p class="card-text">Location</p>
+            <p class="card-text">₹ <%=vendor.price%></p>
+            <p class="card-text"><%=vendor.location%></p>
 
-           </div>
-         </div>
-       </a>
-       </div>
-     </div>
-   <% } %>
-  <% }) %>
- </div>
+            </div>
+          </div>
+        </a>
+        </div>
+      </div>
+    <% } %>
+   <% }) %>
+  </div>
