@@ -131,7 +131,7 @@ app.get(
     res.redirect("/");
   }
 );
-require('./routes/web')(app,User,Vendor)
+require('./routes/web')(app,User,Vendor,Blog)
 
 app.post("/login", function (req, res) {
   const user = new User({

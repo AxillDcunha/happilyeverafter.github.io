@@ -2,14 +2,13 @@
   <div class="website-blogs-page-all-sub">
     <div class="container">
       <div class="row">
-        <% vendor.forEach(vendor => { %> <% if (vendor.type==="photographer") {
-        %>
+        <% vendor.forEach(vendor => { %> 
 
         <div class="col-md-4">
           <div class="blog-card blog-card-blog">
             <div class="blog-card-image">
               <a href="/<%=vendor._id%>?blog=blog">
-                <img class="" src="<%=vendor.img%>" />
+                <img class="" src="<%=vendor.img[1]%>" />
               </a>
               <div class="ripple-cont"></div>
             </div>
@@ -18,12 +17,9 @@
                 <i class="far fa-newspaper"></i> News
               </h6>
               <h4 class="blog-card-caption">
-                <a href="/<%=vendor._id%>?blog=blog"
-                  >Lorem Ipsum is simply dummy text of the printing and</a
-                >
-              </h4>
+                <a href="/<%=vendor._id%>?blog=blog"><%=vendor.title %></a>              </h4>
               <p class="blog-card-description">
-                <%= vendor.description.slice(0,99) %>...
+                <%=vendor.description[0].slice(0,99)%>
               </p>
               <div class="ftr">
                 <div class="author">
@@ -33,7 +29,7 @@
                       alt="..."
                       class="avatar img-raised"
                     />
-                    <span><%=vendor.name %></span>
+                    <span><%=vendor.username %></span>
                   </a>
                 </div>
                 <div class="stats"><i class="far fa-clock"></i> 10 min</div>
@@ -42,7 +38,7 @@
           </div>
         </div>
 
-        <% } %> <% }) %>
+         <% }) %>
       </div>
     </div>
   </div>

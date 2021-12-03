@@ -3,50 +3,46 @@
         <div class="web-blog-artical">
             <div class="web-post-artical-blog">
                 <div class="website-blog_conten-singlet">
-                    <h1 class="b_content">#FebruaryPicks: The Best Bridal Buys Of The Month!
+                    <h1 class="b_content"><%=vendor.title%>
 
                     </h1>
                 </div>
                 <div class="blog_m">
                     <p class="text-blog-artical">
-                       <%=vendor.description %>
+                       <%=vendor.description[0] %>
                     </p>
                     
                     <p></p>
                     <div class="blog-photo">
                         <div class="photo">
-                            <img class="blogp" loading="lazy" src="<%=vendor.img%>" alt="" width="600" height="750">
+                            <img class="blogp" loading="lazy" src="<%=vendor.img[0]%>" alt="" width="600" height="750">
                         </div>
                     </div>
                     <p></p>
                     <p class="blog-p">
-                        We fell in love with this one as soon as we spotted it! Love the use of pastel colours, and
-                        not to mention that trendy blouse! Love everything about it!
+                        <%=vendor.description[1] %>
                     </p>
                     
                     <p></p>
                     <div class="blog-photo">
                         <div class="photo">
-                            <img class="blogp" loading="lazy" src="<%=vendor.img%>" alt="" width="600" height="750">
+                            <img class="blogp" loading="lazy" src="<%=vendor.img[1]%>" alt="" width="600" height="750">
                         </div>
                     </div>
                     <p></p>
                     <p class="blog-p">
-                        Love this for a trendy intimate wedding! Comes with a floral dupatta that contrasts with the
-                        lehenga, and we love how modern the whole look of this lehenga is- plus, it has a trail
-                        too!&nbsp;
+                        <%=vendor.description[2] %>&nbsp;
                     </p>
                     
                     <p></p>
                     <div class="blog-photo">
                         <div class="photo">
-                            <img class="blogp" loading="lazy" src="<%=vendor.img%>" alt="" width="600" height="750">
+                            <img class="blogp" loading="lazy" src="<%=vendor.img[2]%>" alt="" width="600" height="750">
                         </div>
                     </div>
                     <p></p>
                     <p class="blog-p">
-                        A hand embroidered floral floor length body fit motif gown ,This gown is made in net fabric
-                        with floral details, and is such a pretty pick for the cocktail or reception!
+                        <%=vendor.description[3] %>
                     </p>
                     <p></p>
                 </div>

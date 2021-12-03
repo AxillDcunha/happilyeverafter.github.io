@@ -11,7 +11,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const controller = require("../controllers/controller");
 const services = require('./services');
-function initRoutes(app,User,Vendor) {
+function initRoutes(app,User,Vendor,Blog) {
 
 
     //HOMEPAGE
@@ -165,9 +165,14 @@ app.get("/banquethalls", function (req, res) {
   });
 
   app.get("/blog", function (req, res) {
-    Vendor.find().then(function(vendor) {
+    if (req.isAuthenticated()) {
+      Blog.find().then(function(vendor) {
       res.render("blog",{req:req,user:req.user,vendor:vendor});
     })
+    } else {
+      res.redirect("/login");
+    }
+    
   });
   app.get("/blogupdate", function (req, res) {
     Vendor.find().then(function(vendor) {
@@ -176,7 +181,7 @@ app.get("/banquethalls", function (req, res) {
   });
   //gallery
   app.get("/outfits", (req, res) => {
-    Vendor.find().then(function(vendor) {
+    Blog.find().then(function(vendor) {
       res.render("gallery/outfits",{req:req,user:req.user,vendor:vendor});
     })
     });
@@ -322,7 +327,7 @@ app.get("/:id", async(req, res) => {
   try {
     if (req.query.blog) {
       let vid= req.params.id
-    const foo =await Vendor.findById(vid).then(function(vendor) {
+    const foo =await Blog.findById(vid).then(function(vendor) {
       res.render("blog_detail",{req:req,user:req.user,vendor:vendor});
     })
     throw new Error("We have Trooouble:)")
