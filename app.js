@@ -98,7 +98,7 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "http://localhost:3000/auth/google/happilyeverafter",
+      callbackURL: "https://happilyeveraftergithub.herokuapp.com/auth/google/happilyeverafter",
       userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
     },
     function (accessToken, refreshToken, profile, cb) {
