@@ -12,6 +12,9 @@
   },
   "author": "Axill Dcunha",
   "license": "ISC",
+  "engines": {
+    "node": "14.18.0"
+  },
   "bugs": {
     "url": "https://github.com/AxillDcunha/happilyeverafter.github.io/issues"
   },
