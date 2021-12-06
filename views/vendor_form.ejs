@@ -229,17 +229,21 @@
                 Reviews
             </div>
             
+            
             <div class="vendor-review-by-customer-view-all">
-                <hr>
-                <div class="vendor-review-by-customer-view-container">
-                    <div class="vendor-review-by-customer-view-heading">
-                        <p> raju sing</p> <div class="vendor-review-by-customer-view-heading-star">4.5</div>
+                <% if (vendor.review[0]!= undefined) { %>
+                    <hr>
+                    <div class="vendor-review-by-customer-view-container">
+                        <div class="vendor-review-by-customer-view-heading">
+                            <p> raju sing</p> <div class="vendor-review-by-customer-view-heading-star"><%= vendor.review[0].rating %> </div>
+                        </div>
+                        <div class="vendor-review-by-customer-view-container-content">
+                            <%= vendor.review[0].rev %> 
+                        </div>
                     </div>
-                    <div class="vendor-review-by-customer-view-container-content">
-                        
-                    </div>
-                </div>
-                <hr>
+                    <hr>
+                    <% } %>
+                
 
             </div>
         </div>

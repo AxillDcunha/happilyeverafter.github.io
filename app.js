@@ -315,7 +315,7 @@ app.post("/searchnew",async (req,res)=>{
     console.log(req.body.rev);
     console.log(req.body.rate);
   
-     Vendor.updateOne({id:req.body.vend}, 
+     Vendor.updateOne({_id:req.body.vend}, 
       {$push:{review:{rev:req.body.rev,rating:req.body.rate,author:req.body.author}}}, function (err, docs) {
       if (err){
           console.log(err)
