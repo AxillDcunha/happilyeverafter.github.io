@@ -30,7 +30,7 @@ const vendorSchema = new mongoose.Schema({
   },
   review:{
     type:Array,
-  }
+  },
 });
 
 

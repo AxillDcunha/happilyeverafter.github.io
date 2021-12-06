@@ -190,3 +190,61 @@
         </div>
     </div>
 </div>
+
+<div class="vendor-page-review-vendor">
+    <div class="vendor-page-review-vendor-container">
+        <div class="vendor-page-review-vendor-title">
+            Review Vendor
+        </div>
+        <div class="vendor-page-review-vendor-content">
+        
+        <form  action="/reviewvendor" method="POST">
+            <div class="review-vendor-rating vendor-page-review-vendor-stars">
+                <input type="radio" id="star5" name="rate" value="5" />
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" />
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" />
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" />
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" />
+                <label for="star1" title="text">1 star</label>
+               
+                
+                
+            </div>
+            <input type="text" name="vend" value="<%=vendor.id%>">
+            <input type="hidden" name="author"  <% if (req.isAuthenticated()) { %>
+                value="<%=user.id%> <% } %> ">
+
+
+            <textarea placeholder="Share us your experience..." class="vendor-review-text-review" name="rev" id="" cols="80" rows="5"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+        <hr>
+        <div class="vendor-review-by-customer">
+            <div class="vendor-page-review-vendor-title">
+                Reviews
+            </div>
+            
+            <div class="vendor-review-by-customer-view-all">
+                <hr>
+                <div class="vendor-review-by-customer-view-container">
+                    <div class="vendor-review-by-customer-view-heading">
+                        <p> raju sing</p> <div class="vendor-review-by-customer-view-heading-star">4.5</div>
+                    </div>
+                    <div class="vendor-review-by-customer-view-container-content">
+                        
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+ 

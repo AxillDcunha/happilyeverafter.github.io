@@ -108,3 +108,93 @@
   justify-content: center;
   align-items: center;
 }
+
+
+
+
+
+
+
+
+
+
+.vendor-page-review-vendor{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.vendor-page-review-vendor-container{
+  width: 75%;
+  
+}
+.vendor-page-review-vendor-content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.vendor-page-review-vendor-content form{
+  display: flex;
+  flex-direction: column;
+
+}
+.vendor-page-review-vendor-content button{
+  margin-top: 10px;
+  border: none;
+  background-color: #215732 !important;
+  width: 100px;
+  color: white;
+  padding: 12px 22px 12px 22px ;
+  border-radius: 10px;
+
+}
+
+.vendor-page-review-vendor-stars{
+  width: 180px !important;
+}
+.vendor-page-review-vendor-stars label{
+  
+ margin-top: 10px !important;
+  width: 1em;
+  overflow: hidden;
+  
+  
+
+}
+.vendor-page-review-vendor-title{
+  font-family: "Roboto Slab", "Times New Roman", serif;
+  font-size: larger;
+  font-weight: 600;
+}
+.vendor-review-text-review{
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 2px solid #215732;
+}
+.vendor-review-by-customer{
+  width: 100%;
+}
+.vendor-review-by-customer-view-all{
+  width: 100%;
+}
+.vendor-review-by-customer-view-heading{
+  font-size: large;
+  font-weight: 500;
+  display: flex;
+}
+.vendor-review-by-customer-view-heading-star{
+  color: rgb(255, 255, 255);
+  background-color: #d4b216;
+  margin-left: 10px;
+  padding: 0px 10px 0px 10px ;
+  border-radius: 4px;
+  font-weight: 500;
+}
+.vendor-review-by-customer-view-heading p{
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.vendor-review-by-customer-view-container-content{
+  margin-top: 10px;
+}
