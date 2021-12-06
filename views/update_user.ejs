@@ -9,7 +9,7 @@
         </div>
         <div class="form-title text-center">
             <h2 class="text-dark update-user-haeding-1-0" >Update User</h2>
-            <span class="text-light">Use the below form to Update an account</span>
+            <span class="text-light" >Use the below form to Update an account</span>
         </div>
 
         <!-- add user form -->
@@ -17,7 +17,7 @@
          <div class="form-vendorform-main">
             <div class="form-vendorform-main1">
                 <div class="form-vendorform-left">
-                    <img src="img/FN-Wedding-001009_preview.jpeg" alt="">
+                    <img src="https://th.bing.com/th/id/R.256bcb08d925d2a6587bbaa6fc7f719d?rik=r83PsX1jK3BLkg&riu=http%3a%2f%2fpendleyparty.com%2fwp-content%2fuploads%2f2018%2f10%2fwedding-events-image-13-1024x1536.jpg&ehk=5Cy6UtUYB%2bRUKdu3%2btZpjP4uMEqcM79z%2bz2LCaBPOME%3d&risl=&pid=ImgRaw&r=0" style="height: 100%;"alt="">
         
                 </div>
                 <div class="form-vendorform-right">
@@ -25,8 +25,10 @@
                    <form id="update_user" method="POST">
                     <input type="hidden" name="id" value="<%= vendor._id %>">
                        <header>Vendor Details</header>
-                       <label for="">Brand Name</label>
+                       <label for="">Display Name</label>
                        <input name="userDisplayName" value="<%= vendor.userDisplayName %> "class="input-vendor-form" type="text"  >
+                       <label for="">Brand Name</label>
+                       <input name="name" value="<%= vendor.name %> "class="input-vendor-form" type="text"  >
                        <label for="">Description</label>
                        <textarea name="description"  class="input-vendor-form" name="description" cols="48" rows="5"><%= vendor.description %></textarea>
                        <label for="">Choose a category</label>

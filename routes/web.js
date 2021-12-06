@@ -23,12 +23,13 @@ app.get("/", (req, res) => {
   });
   
   app.get("/search", (req, res) => {
-   
+    req.session.returnTo=req.originalUrl;
       res.render("search",{req:req,user:req.user});
      
     });
   // API work here
   app.get("/dashboard", (req, res) => {
+    req.session.returnTo=req.originalUrl;
     if (req.isAuthenticated()&& req.user.isAdmin==true) {
       Vendor.find().then(function(vendor) {
         res.render("dashboard",{req:req,user:req.user,vendor:vendor});
@@ -38,8 +39,21 @@ app.get("/", (req, res) => {
     }
     
     });
+
+    app.get("/vendordashboard", (req, res) => {
+      req.session.returnTo=req.originalUrl;
+      if (req.isAuthenticated()&& req.user.isVendor===true) {
+        Vendor.find().then(function(vendor) {
+          res.render("vendordashboard",{req:req,user:req.user,vendor:vendor});
+        })
+      } else {
+        res.redirect("/vendorlogin");
+      }
+      
+      });
   
     app.get("/add_users", (req, res) => {
+      req.session.returnTo=req.originalUrl;
       Vendor.find().then(function(vendor) {
         res.render("add_users",{req:req,user:req.user,vendor:vendor});
       })
@@ -50,6 +64,7 @@ app.get("/", (req, res) => {
 
   //CATEGORIES
   app.get("/categories", (req, res) => {
+    req.session.returnTo=req.originalUrl;
     res.status(200).render("categories",{req:req,user:req.user}); //Ejs file not made yet
   });
   
@@ -59,6 +74,7 @@ app.get("/", (req, res) => {
   
   //LOGIN AND SIGNUP ARE ON SAME PAGE
   app.get("/login", (req, res) => {
+    // req.session.returnTo=req.originalUrl;
     res.status(200).render("login",{req:req ,user:req.user});
   });
   app.get("/vendorpage", (req, res) => {
@@ -76,13 +92,15 @@ app.get("/form", function (req, res) {
 
 //logout
 app.get("/logout", function (req, res) {
+  console.log()
   req.logout();
-  res.redirect("/");
+  res.redirect(req.session.returnTo);
 });
 
 
 
 app.get("/review", function (req, res) {
+  req.session.returnTo=req.originalUrl;
   res.render("review",{req:req,user:req.user});
 });
 
@@ -98,114 +116,130 @@ app.get("/review", function (req, res) {
   });
 //venues
 app.get("/banquethalls", function (req, res) {
+  req.session.returnTo=req.originalUrl;
   Vendor.find().then(function(vendor) {
       res.render("venues/banquethalls",{req:req,user:req.user,vendor:vendor});
     })
   });
   app.get("/chennai", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/chennai",{req:req,user:req.user,vendor:vendor});
     })
   });
   app.get("/hotels", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/hotels",{req:req,user:req.user,vendor:vendor});
     })
   });
   app.get("/destinationwedding", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/destinationwedding",{req:req,user:req.user,vendor:vendor});
     })
   });
   
   app.get("/delhi", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/delhi",{req:req,user:req.user,vendor:vendor});
     })
   });
   
   app.get("/resorts", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/resorts",{req:req,user:req.user,vendor:vendor});
     })
   });
   
   app.get("/pune", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/pune",{req:req,user:req.user,vendor:vendor});
     })
   });
   
   app.get("/mumbai", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/mumbai",{req:req,user:req.user,vendor:vendor});
     })
   });
 
   app.get("/subscribe", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("subscribe",{req:req,user:req.user,vendor:vendor});
     })
   });
   
   app.get("/hyderabad", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/hyderabad",{req:req,user:req.user,vendor:vendor});
     })
   });
   app.get("/kolkata", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/kolkata",{req:req,user:req.user,vendor:vendor});
     })
   });
   app.get("/lawns", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("venues/lawns",{req:req,user:req.user,vendor:vendor});
     })
   });
 
   app.get("/blog", function (req, res) {
-    if (req.isAuthenticated()) {
-      Blog.find().then(function(vendor) {
+    req.session.returnTo=req.originalUrl;
+    Blog.find().then(function(vendor) {
       res.render("blog",{req:req,user:req.user,vendor:vendor});
     })
-    } else {
-      res.redirect("/login");
-    }
     
   });
   app.get("/blogupdate", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("blog_update",{req:req,user:req.user,vendor:vendor});
     })
   });
   //gallery
   app.get("/outfits", (req, res) => {
+    req.session.returnTo=req.originalUrl;
     Blog.find().then(function(vendor) {
       res.render("gallery/outfits",{req:req,user:req.user,vendor:vendor});
     })
     });
     app.get("/accessories", (req, res) => {
+      req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("gallery/accessories",{req:req,user:req.user,vendor:vendor});
     })
     });
     app.get("/gallery_card", (req, res) => {
+      req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("gallery/gallery_card",{req:req,user:req.user,vendor:vendor});
     })
     });
     app.get("/gallery_mendhi", (req, res) => {
+      req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("gallery/gallery_mendhi",{req:req,user:req.user,vendor:vendor});
     })
     });
     app.get("/gallery_decor", (req, res) => {
+      req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("gallery/gallery_decor",{req:req,user:req.user,vendor:vendor});
     })
     });
     app.get("/gallery_photography", (req, res) => {
+      req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("gallery/gallery_photography",{req:req,user:req.user,vendor:vendor});
     })
@@ -213,10 +247,12 @@ app.get("/banquethalls", function (req, res) {
 
 //vendors
 app.get("/vendors", function (req, res) {
+  req.session.returnTo=req.originalUrl;
     res.render("vendors",{req:req,user:req.user});
   });
   
   app.get("/photographer", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("vendors/photographer",{req:req,user:req.user,vendor:vendor});
       
@@ -224,12 +260,14 @@ app.get("/vendors", function (req, res) {
   });
   
   app.get("/makeup", function (req, res) {
+    req.session.returnTo=req.originalUrl;
      Vendor.find().then(function(vendor) {
       res.render("vendors/makeup",{req:req,user:req.user,vendor:vendor});
       
     })
   });
   app.get("/bridalwear", function (req, res) {
+    req.session.returnTo=req.originalUrl;
      Vendor.find().then(function(vendor) {
       res.render("vendors/bridalwear",{req:req,user:req.user,vendor:vendor});
       
@@ -237,12 +275,14 @@ app.get("/vendors", function (req, res) {
   });
   
   app.get("/groomwear", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("vendors/groomwear",{req:req,user:req.user,vendor:vendor});
       
     })
   });
   app.get("/musicanddance", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("vendors/musicanddance",{req:req,user:req.user,vendor:vendor});
       
@@ -250,6 +290,7 @@ app.get("/vendors", function (req, res) {
   });
   
   app.get("/flourist", function (req, res) {
+    req.session.returnTo=req.originalUrl;
      Vendor.find().then(function(vendor) {
       res.render("vendors/flourist",{req:req,user:req.user,vendor:vendor});
       
@@ -257,6 +298,7 @@ app.get("/vendors", function (req, res) {
   });
   
   app.get("/honeymoon", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("vendors/honeymoon",{req:req,user:req.user,vendor:vendor});
       
@@ -265,6 +307,7 @@ app.get("/vendors", function (req, res) {
   
   
   app.get("/food", function (req, res) {
+    req.session.returnTo=req.originalUrl;
    Vendor.find().then(function(vendor) {
       res.render("vendors/food",{req:req,user:req.user,vendor:vendor});
       
@@ -273,6 +316,7 @@ app.get("/vendors", function (req, res) {
   
   
   app.get("/mehndi", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("vendors/mehndi",{req:req,user:req.user,vendor:vendor});
       
@@ -281,6 +325,7 @@ app.get("/vendors", function (req, res) {
   
   
   app.get("/planninganddecor", function (req, res) {
+    req.session.returnTo=req.originalUrl;
      Vendor.find().then(function(vendor) {
       res.render("vendors/planninganddecor",{req:req,user:req.user,vendor:vendor});
       
@@ -288,6 +333,7 @@ app.get("/vendors", function (req, res) {
   });
   
   app.get("/invites", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("vendors/invites",{req:req,user:req.user,vendor:vendor});
       
@@ -295,26 +341,38 @@ app.get("/vendors", function (req, res) {
   });
   
   app.get("/jewellary", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
       res.render("vendors/jewellary",{req:req,user:req.user,vendor:vendor});
       
     })
   });
   app.get("/sort", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     let cat=req.query.categories;
     Vendor.find({"type":cat}).sort({"price":-1}).then(function(vendor) {
-      res.render("sort",{req:req,user:req.user,vendor:vendor});
+      res.render("sort",{req:req,user:req.user,vendor:vendor,cat:cat});
 
     })
   });
   app.get("/sortd", function (req, res) {
+    req.session.returnTo=req.originalUrl;
     let cat=req.query.categories;
     Vendor.find({"type":cat}).sort({"price":1}).then(function(vendor) {
-      res.render("sort",{req:req,user:req.user,vendor:vendor});
+      res.render("sort",{req:req,user:req.user,vendor:vendor,cat:cat});
 
     })
   });
  
+  app.get("/sortloc", function (req, res) {
+    req.session.returnTo=req.originalUrl;
+    let cat=req.query.categories;
+    let location=req.query.location;
+    Vendor.find({"type":cat,"location":location}).sort({"price":1}).then(function(vendor) {
+      res.render("sort",{req:req,user:req.user,vendor:vendor,cat:cat});
+
+    })
+  });
   // API
 app.post('/api/users', controller.create);
 app.get('/api/users', controller.find);

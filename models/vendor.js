@@ -28,6 +28,9 @@ const vendorSchema = new mongoose.Schema({
   location:{
     type:String,
   },
+  review:{
+    type:Array,
+  }
 });
 
 

@@ -2,7 +2,7 @@
 
 :root{
     --dark: #215732;
-    --light: #adb5bd;
+    --light: #000000;
     --border: #215732;
     --border-btn: #edf2f4;
 }
@@ -82,7 +82,7 @@ a {
 }
 
 .text-light{
-    color: var(--light);
+    color: var(--light)!important;
 }
 
 .text-gradient{

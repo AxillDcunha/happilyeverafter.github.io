@@ -128,12 +128,14 @@ app.get(
   passport.authenticate("google", { failureRedirect: "/login" }),
   function (req, res) {
     // Successful authentication, redirect to homepage .
-    res.redirect("/");
+    res.redirect(req.session.returnTo||"/");
   }
 );
 require('./routes/web')(app,User,Vendor,Blog)
 
 app.post("/login", function (req, res) {
+ 
+  console.log(req.session.returnTo)
   const user = new User({
     username: req.body.username,
     password: req.body.password,
@@ -144,7 +146,7 @@ app.post("/login", function (req, res) {
       console.log(err);
     } else {
       passport.authenticate("local")(req, res, function () {
-        res.redirect("/");
+        res.redirect(req.session.returnTo || "/");
       });
     }
   });
@@ -213,7 +215,7 @@ app.post("/vendorlogin", function (req, res) {
       console.log(err);
     } else {
       passport.authenticate("local")(req, res, function () {
-        res.redirect("/");
+        res.redirect("/vendordashboard");
       });
     }
   });
@@ -235,12 +237,13 @@ app.post("/vendorregister", function (req, res) {
       } else {
         console.log(req);
         passport.authenticate("local")(req, res, function () {
-          res.redirect("/");
+          res.redirect("/vendordashboard");
         });
       }
     }
   );
 });
+
 
 
 app.post("/vendorinfo", function (req, res) {
@@ -250,7 +253,7 @@ app.post("/vendorinfo", function (req, res) {
   
     {
       
-      "username" : req.body.userDisplayName,
+      "username" : req.body.email,
       "userDisplayName" :req.body.userDisplayName,
       "description" : req.body.description,
       "name" : req.body.userDisplayName,

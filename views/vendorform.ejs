@@ -7,6 +7,7 @@
         <div class="form-vendorform-right">
             <div class="form-vendorform-right1">
            <form action="/vendorinfo" method="post">
+               <input type="hidden" name="email" value="<%=user.username%>">
                <header>Vendor Details</header>
                <label for="">Brand Name</label>
                <input name="userDisplayName" class="input-vendor-form" type="text"  >
