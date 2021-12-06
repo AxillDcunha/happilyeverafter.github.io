@@ -10,10 +10,10 @@ const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
-const vendor=require("./models/vendor");
-const Vendor = require("./models/vendor");
-const Gallery = require("./models/gallery");
-const Blog = require("./models/blog");
+const vendor=require(__dirname +"./models/vendor");
+const Vendor = require(__dirname +"./models/vendor");
+const Gallery = require(__dirname +"./models/gallery");
+const Blog = require(__dirname +"./models/blog");
 //Port 
 const port = process.env.PORT || 3000;
 
