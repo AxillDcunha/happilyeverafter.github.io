@@ -15,7 +15,7 @@ const Vendor = require("./models/vendor");
 const Gallery = require("./models/gallery");
 const Blog = require("./models/blog");
 //Port 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -47,7 +47,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/Happilyeverafter", {
+mongoose.connect("mongodb+srv://axilldcunha:vasai2205@happilyeverafter.ov4nl.mongodb.net/Happilyeverafter?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
