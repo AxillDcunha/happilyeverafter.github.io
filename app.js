@@ -47,7 +47,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://axilldcunha:vasai2205@happilyeverafter.ov4nl.mongodb.net/Happilyeverafter?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
