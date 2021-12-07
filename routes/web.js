@@ -133,6 +133,12 @@ app.get("/banquethalls", function (req, res) {
       res.render("venues/hotels",{req:req,user:req.user,vendor:vendor});
     })
   });
+  app.get("/contact", function (req, res) {
+    req.session.returnTo=req.originalUrl;
+    Vendor.find().then(function(vendor) {
+      res.render("contact",{req:req,user:req.user,vendor:vendor});
+    })
+  });
   app.get("/destinationwedding", function (req, res) {
     req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
@@ -388,22 +394,27 @@ app.delete('/api/users/:id', controller.delete);
 
 app.get("/:id", async(req, res) => {
   req.session.returnTo=req.originalUrl;
-  try {
-    if (req.query.blog) {
+  if (req.isAuthenticated()) {
+    try {
+      if (req.query.blog) {
+        let vid= req.params.id
+      const foo =await Blog.findById(vid).then(function(vendor) {
+        res.render("blog_detail",{req:req,user:req.user,vendor:vendor});
+      })
+      throw new Error("We have Trooouble:)")
+      }
       let vid= req.params.id
-    const foo =await Blog.findById(vid).then(function(vendor) {
-      res.render("blog_detail",{req:req,user:req.user,vendor:vendor});
-    })
-    throw new Error("We have Trooouble:)")
+      const foo =await Vendor.findById(vid).then(function(vendor) {
+        res.render("vendor_form",{req:req,user:req.user,vendor:vendor});
+      })
+      throw new Error("We have Trooouble:)")
+    } catch (error) {
+      
     }
-    let vid= req.params.id
-    const foo =await Vendor.findById(vid).then(function(vendor) {
-      res.render("vendor_form",{req:req,user:req.user,vendor:vendor});
-    })
-    throw new Error("We have Trooouble:)")
-  } catch (error) {
-    
+  } else {
+    res.redirect("/login");
   }
+  
 });
 
 
