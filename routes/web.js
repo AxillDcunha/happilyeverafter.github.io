@@ -203,9 +203,14 @@ app.get("/banquethalls", function (req, res) {
   });
   app.get("/blogupdate", function (req, res) {
     req.session.returnTo=req.originalUrl;
-    Vendor.find().then(function(vendor) {
-      res.render("blog_update",{req:req,user:req.user,vendor:vendor});
-    })
+    if (req.isAuthenticated()) {
+      Vendor.find().then(function(vendor) {
+        res.render("blog_update",{req:req,user:req.user,vendor:vendor});
+      })
+    } else {
+      res.redirect("/login");
+    }
+    
   });
   //gallery
   app.get("/outfits", (req, res) => {
