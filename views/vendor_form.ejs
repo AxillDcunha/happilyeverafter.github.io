@@ -1,3 +1,9 @@
+<%let avg=0 %>
+<%for (let i = 0; i < vendor.review.length; i++) { %>
+   <% avg=avg+parseInt(vendor.review[i].rating)/ vendor.review.length;%>
+    
+  <%}%>
+  <%avg=parseFloat(avg).toFixed(1) %>
 <div class="vendor_profile">
     <div>
         <div class="min_container">
@@ -29,8 +35,8 @@
                                                 </div>
                                             </div>
                                             <a href="https://www.apple.com/in/iphone-13-pro/" class="frowc2">
-                                                <span class="sp1"><i class="star"></i>4.4</span>
-                                                <h6 class="dp">12 reiews</h6>
+                                                <span class="sp1"><i class="star"></i><%= avg %> </span>
+                                                <h6 class="dp"><%= vendor.review.length %>  reiews</h6>
                                             </a>
                                         </div>
                                         <div class="frow2">
@@ -214,9 +220,9 @@
                 
                 
             </div>
-            <input type="text" name="vend" value="<%=vendor.id%>">
+            <input type="hidden" name="vend" value="<%=vendor.id%>">
             <input type="hidden" name="author"  <% if (req.isAuthenticated()) { %>
-                value="<%=user.id%> <% } %> ">
+                value="<%=user.userDisplayName%> <% } %> ">
 
 
             <textarea placeholder="Share us your experience..." class="vendor-review-text-review" name="rev" id="" cols="80" rows="5"></textarea>
@@ -231,17 +237,20 @@
             
             
             <div class="vendor-review-by-customer-view-all">
-                <% if (vendor.review[0]!= undefined) { %>
-                    <hr>
-                    <div class="vendor-review-by-customer-view-container">
-                        <div class="vendor-review-by-customer-view-heading">
-                            <p> raju sing</p> <div class="vendor-review-by-customer-view-heading-star"><%= vendor.review[0].rating %> </div>
+                <% for( let i = 0; i < vendor.review.length; i++ ) { %>
+                    <% if (vendor.review[i]!= undefined) { %>
+                        <hr>
+                        <div class="vendor-review-by-customer-view-container">
+                            <div class="vendor-review-by-customer-view-heading">
+                                <p><%= vendor.review[i].author%></p> <div class="vendor-review-by-customer-view-heading-star"><%= vendor.review[i].rating %> </div>
+                            </div>
+                            <div class="vendor-review-by-customer-view-container-content">
+                                <%= vendor.review[i].rev %> 
+                            </div>
                         </div>
-                        <div class="vendor-review-by-customer-view-container-content">
-                            <%= vendor.review[0].rev %> 
-                        </div>
-                    </div>
-                    <hr>
+                        <hr>
+                    <% } %>
+                   
                     <% } %>
                 
 

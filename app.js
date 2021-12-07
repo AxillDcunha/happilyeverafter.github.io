@@ -322,9 +322,27 @@ app.post("/searchnew",async (req,res)=>{
       }
       else{
           console.log("Updated Docs : ", docs);
+          res.redirect(req.session.returnTo);
       }
    })
-   
+   let ratete=0;
+   const foo =await Vendor.findById(req.body.vend).then(function(vendor) {
+    
+for (let i = 0; i < vendor.review.length; i++) { 
+  ratete=ratete+parseInt(vendor.review[i].rating)/ vendor.review.length;
+    
+  }
+console.log(ratete);
+  })
+
+   Vendor.findOneAndUpdate({_id:req.body.vend}, {$set:{ratingavg:ratete}}, {new: true}, (err, doc) => {
+    if (err) {
+        console.log("Something wrong when updating data!");
+    }
+
+    console.log(doc);
+});
+
 
   
     

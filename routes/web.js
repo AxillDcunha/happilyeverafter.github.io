@@ -387,6 +387,7 @@ app.delete('/api/users/:id', controller.delete);
 
 
 app.get("/:id", async(req, res) => {
+  req.session.returnTo=req.originalUrl;
   try {
     if (req.query.blog) {
       let vid= req.params.id
