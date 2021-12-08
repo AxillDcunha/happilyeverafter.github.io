@@ -384,6 +384,18 @@ app.get("/vendors", function (req, res) {
 
     })
   });
+  app.get("/sortreview", function (req, res) {
+    req.session.returnTo=req.originalUrl;
+    let cat=req.query.categories;
+    
+    Vendor.find({"type":cat}).sort({"ratingavg":-1}).then(function(vendor) {
+      res.render("sort",{req:req,user:req.user,vendor:vendor,cat:cat});
+
+    })
+  });
+
+
+
   // API
 app.post('/api/users', controller.create);
 app.get('/api/users', controller.find);
