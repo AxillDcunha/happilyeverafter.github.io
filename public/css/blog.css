@@ -52,7 +52,16 @@
     margin-bottom: 20px;
 }
 
+.card-text-new{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.card-text-new svg{
+    fill: rgb(122, 122, 11);
+    padding-right: 5px;
+}
 
 
 
