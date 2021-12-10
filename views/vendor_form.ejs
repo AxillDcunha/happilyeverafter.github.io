@@ -1,8 +1,9 @@
 <%let avg=0 %>
 <%for (let i = 0; i < vendor.review.length; i++) { %>
-   <% avg=avg+parseInt(vendor.review[i].rating)/ vendor.review.length;%>
-    
+   <% avg=avg+parseInt(vendor.review[i].rating);%>
+   
   <%}%>
+  <% avg=avg/vendor.review.length; %> 
   <%avg=parseFloat(avg).toFixed(1) %>
 <div class="vendor_profile">
     <div>

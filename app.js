@@ -310,43 +310,46 @@ app.post("/searchnew",async (req,res)=>{
   
     
   });
-  app.post("/reviewvendor",async (req,res)=>{
-    console.log(req.body.vend);
-    console.log(req.body.rev);
-    console.log(req.body.rate);
-  
-     Vendor.updateOne({_id:req.body.vend}, 
-      {$push:{review:{rev:req.body.rev,rating:req.body.rate,author:req.body.author}}}, function (err, docs) {
-      if (err){
-          console.log(err)
+app.post("/reviewvendor", async (req, res) => {
+  // console.log(req.body.vend);
+  // console.log(req.body.rev);
+  // console.log(req.body.rate);
+let ratein=req.body.rate;
+  Vendor.updateOne({ _id: req.body.vend },
+    { $push: { review: { rev: req.body.rev, rating: req.body.rate, author: req.body.author } } }, function (err, docs) {
+      if (err) {
+        console.log(err)
       }
-      else{
-          console.log("Updated Docs : ", docs);
-          res.redirect(req.session.returnTo);
+      else {
+        // console.log("Updated Docs : ", docs);
+        res.redirect(req.session.returnTo);
       }
-   })
-   let ratete=0;
-   const foo =await Vendor.findById(req.body.vend).then(function(vendor) {
-    
-for (let i = 0; i < vendor.review.length; i++) { 
-  ratete=ratete+parseInt(vendor.review[i].rating)/ vendor.review.length;
-    
-  }
-console.log(ratete);
+    })
+    console.log(ratein);
+  let ratete = 0;
+  const foo = await Vendor.findById(req.body.vend).then(function (vendor) {
+    // console.log(vendor);
+    for (let i = 0; i < vendor.review.length; i++) {
+      ratete = ratete + parseInt(vendor.review[i].rating) ;
+      // console.log(parseInt(vendor.review[i].rating))
+    }
+    console.log(vendor.review.length+1);
+    ratete = (ratete+parseInt(ratein))/(vendor.review.length+1)
+    console.log(ratete);
   })
 
-   Vendor.findOneAndUpdate({_id:req.body.vend}, {$set:{ratingavg:ratete}}, {new: true}, (err, doc) => {
+  Vendor.findOneAndUpdate({ _id: req.body.vend }, { $set: { ratingavg: ratete } }, { new: true }, (err, doc) => {
     if (err) {
-        console.log("Something wrong when updating data!");
+      console.log("Something wrong when updating data!");
     }
 
-    console.log(doc);
-});
-
-
-  
-    
+    // console.log(doc);
   });
+
+
+
+
+});
 //Listening on port 3000
 app.listen(port, () => {
   console.log(`sever started on port ${port}`);
