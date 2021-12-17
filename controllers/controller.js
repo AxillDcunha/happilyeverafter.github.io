@@ -74,6 +74,7 @@ exports.update = (req, res)=>{
 
     const id = req.params.id;
     const uid = req.params.id;
+    console.log(req.body);
     vendor.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
             if(!data){

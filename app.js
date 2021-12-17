@@ -13,6 +13,7 @@ const findOrCreate = require("mongoose-findorcreate");
 const vendor=require("./models/vendor");
 const Vendor = require("./models/vendor");
 const Gallery = require("./models/gallery");
+const Contact = require("./models/contact");
 const Blog = require("./models/blog");
 //Port 
 const port = process.env.PORT || 3000;
@@ -131,7 +132,7 @@ app.get(
     res.redirect(req.session.returnTo||"/");
   }
 );
-require('./routes/web')(app,User,Vendor,Blog)
+require('./routes/web')(app,User,Vendor,Blog,Contact)
 
 app.post("/login", function (req, res) {
  
@@ -272,6 +273,49 @@ app.post("/vendorinfo", function (req, res) {
 
 });
 
+app.post("/contactvend", function (req, res) {
+  let email=(req.body.email).trim();
+  console.log(req);
+  Contact.insertMany([
+  
+    {
+      "fullname" : req.body.fullname,
+      "vendorcontact" : req.body.vendorcontact,
+      "usercontact" :req.body.usercontact,
+      "date" : req.body.date,
+      "email" : req.body.email,
+      "num" : req.body.tel,
+      "__v" : 0
+  }
+  ]).then(function(){
+    console.log("Data inserted")  // Success
+    res.redirect("/");
+  }).catch(function(error){
+    console.log(error)      // Failure
+  });
+
+});
+
+app.post("/continfoin:id", function (req, res) {
+  const id = req.params.id;
+
+    Contact.findByIdAndDelete(id)
+        .then(data => {
+            if(!data){
+                res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
+            }else{
+                res.send({
+                    message : "User was deleted successfully!"
+                })
+            }
+        })
+        .catch(err =>{
+            res.status(500).send({
+                message: "Could not delete User with id=" + id
+            });
+        });
+
+});
 app.post("/searchnew",async (req,res)=>{
     try {
         let searchterm=req.body.newnew;
