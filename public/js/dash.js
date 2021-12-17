@@ -75,7 +75,7 @@ if(window.location.pathname == "/interestedcustomer"){
 
         var request = {
             "url" : `https://happilyeveraftergithub.herokuapp.com/continfoin/${id}`,
-            "method" : "DELETE"
+            "method" : "POST"
         }
 
         if(confirm("Do you really want to delete this record?")){
