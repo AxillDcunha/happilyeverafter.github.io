@@ -296,7 +296,7 @@ app.post("/contactvend", function (req, res) {
 
 });
 
-app.post("/continfoin:id", function (req, res) {
+app.delete("/continfoin:id", function (req, res) {
   const id = req.params.id;
 
     Contact.findByIdAndDelete(id)
