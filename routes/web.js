@@ -11,6 +11,7 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const controller = require("../controllers/controller");
 const services = require('./services');
+const Contact = require("../models/contact");
 function initRoutes(app,User,Vendor,Blog) {
 
 
@@ -362,7 +363,7 @@ app.get("/vendors", function (req, res) {
    
   app.get("/interestedcustomer", function (req, res) {
     req.session.returnTo=req.originalUrl;
-     Vendor.find().then(function(vendor) {
+     Contact.find().then(function(vendor) {
       res.render("interestedcustomer",{req:req,user:req.user,vendor:vendor});
       
     })

@@ -46,6 +46,7 @@ if(window.location.pathname == "/dashboard"){
 
     })
 }
+
 if(window.location.pathname == "/vendordashboard"){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
@@ -53,6 +54,26 @@ if(window.location.pathname == "/vendordashboard"){
 
         var request = {
             "url" : `https://happilyeveraftergithub.herokuapp.com/api/users/${id}`,
+            "method" : "DELETE"
+        }
+
+        if(confirm("Do you really want to delete this record?")){
+            $.ajax(request).done(function(response){
+                alert("Data Deleted Successfully!");
+                location.reload();
+            })
+        }
+
+    })
+}
+
+
+if(window.location.pathname == "/interestedcustomer"){
+    $ondelete = $(".table tbody td a.delete");
+    $ondelete.click(function(){
+        var id = $(this).attr("data-id")
+        var request = {
+            "url" : `https://happilyeveraftergithub.herokuapp.com/api/users/${id}?del="true"`,
             "method" : "DELETE"
         }
 

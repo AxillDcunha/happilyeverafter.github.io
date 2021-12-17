@@ -1,27 +1,33 @@
-// const mongoose = require("mongoose");
-// const BlogSchema = new mongoose.Schema({
-//   email:{
-//     type:String,
-//     // unique:true
-//   },
-//   img: {
-//     type: [],
-//     // required: true
-//   },
-//   title: {
-//     type: String,
-//     // required: true
-//   },
-//   description: {
-//     type: [],
-//     // required: true
-//   },
- 
-// });
+const mongoose = require("mongoose");
+const ContactSchema = new mongoose.Schema({
+    fullname:{
+        type:String,
+        // unique:true
+      },
+    email:{
+    type:String,
+    // unique:true
+  },
+  num: {
+    type:String,
+    // required: true
+  },
+  date: {
+    type: String,
+    // required: true
+  },
+  usercontact:{
+      type:String,
+  },
+  vendorcontact:{
+    type:String,
+  }
+  
+});
 
 
-// const Blog = new mongoose.model("Blog", BlogSchema);
+const Contact = new mongoose.model("Contact", ContactSchema);
 
 
-// module.exports= Blog
+module.exports= Contact
 

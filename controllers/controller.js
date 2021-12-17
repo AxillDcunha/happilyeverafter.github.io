@@ -1,3 +1,4 @@
+const Contact = require('../models/contact');
 const Vendor = require('../models/vendor');
 var vendor= require('../models/vendor');
 
@@ -34,7 +35,7 @@ exports.create = (req,res)=>{
 
 // retrieve and return all users/ retrive and return a single user
 exports.find = (req, res)=>{
-    
+   
     if(req.query.id){
         const id = req.query.id;
 
@@ -74,6 +75,7 @@ exports.update = (req, res)=>{
 
     const id = req.params.id;
     const uid = req.params.id;
+    console.log(req.body);
     vendor.findByIdAndUpdate(id, req.body, { useFindAndModify: false})
         .then(data => {
             if(!data){
@@ -90,6 +92,25 @@ exports.update = (req, res)=>{
 
 // Delete a user with specified user id in the request
 exports.delete = (req, res)=>{
+    if (req.params.tt) {
+        const id = req.params.tt;
+
+        Contact.findByIdAndDelete(id)
+            .then(data => {
+                if(!data){
+                    res.status(404).send({ message : `Cannot Delete with id ${id}. Maybe id is wrong`})
+                }else{
+                    res.send({
+                        message : "User was deleted successfully!"
+                    })
+                }
+            })
+            .catch(err =>{
+                res.status(500).send({
+                    message: "Could not delete User with id=" + id
+                });
+            });   
+    }
     const id = req.params.id;
 
     vendor.findByIdAndDelete(id)

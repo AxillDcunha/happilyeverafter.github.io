@@ -86,13 +86,15 @@
                                 <div class="form_headding">
                                     <p class="fp">Contact <%=vendor.userDisplayName%></p>
                                 </div>
-                                <form action="" class="vform">
+
+                                
+                                <form action="/contactvend" method="post" class="vform">
                                     <div class="vform0">
                                         <div class="vform1">
                                             <div class="vf">
                                                 <div class="vf1">
                                                     <div class="vf2">
-                                                        <input type="text" placeholder="Full name"
+                                                        <input name="fullname" type="text" placeholder="Full name"
                                                              aria-invalid="false" class="vf3">
                                                     </div>
                                                 </div>
@@ -102,7 +104,7 @@
                                                     <div class="vff2">
                                                         <div class="vff3">
                                             
-                                                            <input type="tel" placeholder="Mobile number" class="vff4">
+                                                            <input name="tel" type="tel" placeholder="Mobile number" class="vff4">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -113,7 +115,7 @@
                                             <div class="vf">
                                                 <div class="vf1">
                                                     <div class="vf2">
-                                                        <input type="text" placeholder="Email-address"
+                                                        <input  name="email" type="email" placeholder="Email-address"
                                                              aria-invalid="false" class="vf3">
                                                     </div>
                                                 </div>
@@ -121,7 +123,7 @@
                                             <div class="vf" format="yyyy-MM-dd">
                                                 <div class="vf11">
                                                     <input  placeholder="Function date*"
-                                                         type="date" class="vf3" value="">
+                                                         type="date" class="vf3" name="date">
 
                                                 </div>
                                             </div>
@@ -135,7 +137,9 @@
                                         <div class="send_inquiry1">
                                             <div class="btn">
                                                 <div class="anbtn zz">
-                                                    <button class="btninfo">Send Message</button>
+                                                    <input type="hidden" name="usercontact" value="<%= user.id %>">
+                                                    <input type="hidden" name="vendorcontact" value="<%= vendor.username%>">
+                                                    <button class="btninfo" type="submit">Send Message</button>
                                                 </div>
                                                 
                                             </div>
