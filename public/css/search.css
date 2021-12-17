@@ -210,3 +210,27 @@ footer{
     background-color: white;
     color: black;
 }
+
+
+
+@media screen and (max-width: 480px){
+    .website-footer-sub{
+        display: flex;
+        flex-direction: column;
+    }
+    .website-footer-1{
+        width: 100%;
+    }
+    .website-footer-2{
+        width: 100%;
+    }
+    .website-footer-email-submit input{
+        width: 200px;
+    }
+    .website-footer-final-buttons button{
+        margin-right: 0;
+    }
+    .website-footer-final-buttons{
+        margin-left: 0;
+    }
+}

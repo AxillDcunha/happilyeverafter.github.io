@@ -133,13 +133,15 @@ display: flex;
 flex-direction: column;
 align-items: flex-end;
 text-decoration: none;
+justify-content: center;
+align-items: center;
 background-color: transparent;
 }
 .sp1{
 min-width: 80px;
 max-width: 80px;
 height: 40px;
-  background-color: #9acd32;
+  background-color: #215732;
   border-radius: 2px;
   color: #fff;
   font-size: 16px;
@@ -159,6 +161,7 @@ display: inline-block;
 .dp{
 font-size: 16px;
 font-weight: 400;
+color: black;
 white-space: nowrap;
 margin: 0;
 }
@@ -537,7 +540,7 @@ padding-left: 20px;
   justify-content: space-between;
 }
 .vh{
-font-size: 16px;
+font-size: large;
 font-weight: 600;
 margin: 0;
 }
@@ -630,9 +633,10 @@ flex-direction: row;
 flex-wrap: wrap;
 }
 .vendorp{
-font-size: 20px;
-  font-weight: 400;
+font-size: smaller;
+  font-weight: 600;
   margin: 0;
+  color: #215732;
 }
 .vendorh6{
 color: #4a4a4a;
@@ -655,7 +659,7 @@ background-color: #fff;
 display: flex;
 flex-direction: row;
 -webkit-box-pack: justify;
-justify-content: space-between;
+justify-content: center;
 padding: 20px;
 border-bottom: 1px solid rgb(231, 46, 119);
 }
@@ -665,7 +669,9 @@ overflow: hidden;
 z-index: 0;
 padding: 0;
 }
-.zz{
+.zz button{
+font-family: "Roboto Slab", "Times New Roman", serif;
+font-weight: 600;
 display: flex;
 height: 50px;
 width: 150px;
@@ -678,8 +684,8 @@ z-index: 0;
 color: rgb(255, 255, 255);
 cursor: pointer;
 border-radius: 100px;
-background-color: rgb(231, 46, 119);
-border: 1px solid rgb(231, 46, 119);
+background-color: #9d2f2e;
+border: #9d2f2e;
 pointer-events: auto;
 }
 .xx{
@@ -1201,8 +1207,8 @@ justify-content: center;
 .vf42{
 color: #909090;
 margin-top: 5px;
-font-size: 12px;
-font-weight: 400;
+font-size: small;
+font-weight: 500;
 display: flex;
 align-items: center;
 justify-content: center;

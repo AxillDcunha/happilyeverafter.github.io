@@ -358,6 +358,16 @@ app.get("/vendors", function (req, res) {
       
     })
   });
+
+   
+  app.get("/interestedcustomer", function (req, res) {
+    req.session.returnTo=req.originalUrl;
+     Vendor.find().then(function(vendor) {
+      res.render("interestedcustomer",{req:req,user:req.user,vendor:vendor});
+      
+    })
+  });
+
   app.get("/sort", function (req, res) {
     req.session.returnTo=req.originalUrl;
     let cat=req.query.categories;
