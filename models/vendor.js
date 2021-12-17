@@ -43,183 +43,184 @@ vendorSchema.index({name:'text',userDisplayName: 'text',description:'text'});
 // Vendor.insertMany([
 //   {
       
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : " 567 Dance ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : " 567 Dance  ",
-//     "img" : " https://images.squarespace-cdn.com/content/v1/54d000f4e4b0ac8237a003b5/1456969060964-90ODIFESUN5F2OOGZ93Q/wedding+dance+lessons.jpg?format=1000w ",
-//     "price" : 17650,
-//     "type" : " Florist ",
-//    "location " : "Mumbai",
+//     "username" : "jasmin@gmail.com",
+//     "userDisplayName" : "Deepak Mehandi Artist",
+//     "description" : "mehndi is a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : "Deepak Mehandi Artist",
+//     "img" : "https://www.livinghours.com/wp-content/uploads/2016/05/Bridal-mehndi-Designs-1280x720.jpg ",
+//     "price" : 5970,
+//     "type" : "mehndi",
+//   "location" : "Mumbai",
+//     "__v" : 0
+//   },
+  
+  
+  
+  
+  
+  
+//   {
+        
+//     "username" : "rajkumar@gmail.com",
+//     "userDisplayName" : "Raj  Mehandi",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : "Raj  Mehandi",
+//     "img" : "https://karmaeyebrow.com/media/2016/05/bridial-heena.jpg ",
+//     "price" : 4570,
+//     "type" : "mehndi",
+//   "location" : "Mumbai",
+//     "__v" : 0
+//   },
+  
+  
+//   {
+        
+//     "username" : "prettymehandi@gmail.com",
+//     "userDisplayName" : "Pretty Mehandi",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : "Pretty Mehandi ",
+//     "img" : "https://www.fashionlady.in/wp-content/uploads/2018/05/Tikki-mehndi-Designs.jpg",
+//     "price" : 6581,
+//     "type" : "mehndi",
+//   "location" : "Mumbai",
+//     "__v" : 0
+//   },
+  
+  
+//   {
+        
+//     "username" : "lara@gmail.com",
+//     "userDisplayName" : " Lara Rose ",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : "Lara Rose ",
+//     "img" : "https://static.toiimg.com/photo/msid-75890046/75890046.jpg?351402 ",
+//     "price" : 9871,
+//     "type" : "mehndi",
+//   "location" : "pune",
 //     "__v" : 0
 //   },
   
 //   {
         
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : " Bella Flowers  ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : " Bella Flowers  ",
-//     "img" : "https://images.squarespace-cdn.com/content/v1/597282dd6b8f5bd129c3ae8c/1585083890141-RF5ALBGD6J8MYLOUSNFG/woman+florist+arranging+wedding+bouquet.jpg?format=1000w",
-//     "price" : 200000,
-//     "type" : " Florist ",
-//    "location " : "Mumbai",
+//     "username" : "sarahruth@gmail.com",
+//     "userDisplayName" : " Sara Ruth ",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : " Sara Ruth ",
+//     "img" : "https://images.shaadisaga.com/shaadisaga_production/photos/pictures/000/473/289/original/Burn_pixel_weddings.jpg?1532351850 ",
+//     "price" : 8971,
+//     "type" : "mehndi",
+//   "location" : "pune",
+//     "__v" : 0
+//   },
+  
+  
+//   {
+        
+//     "username" : "bella@gmail.com",
+//     "userDisplayName" : " Bella mehndi",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : " Bella mehndi",
+//     "img" : "https://i.pinimg.com/originals/d2/71/4c/d2714cf6b59ffd15cc95d07582a6df0a.jpg ",
+//     "price" : 7864,
+//     "type" : "mehndi",
+//   "location" : "pune",
 //     "__v" : 0
 //   },
   
 //   {
         
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Sarahs FlowersS   ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : " Sarahs Flowers   ",
-//     "img" : "https://www.phillymag.com/wp-content/uploads/sites/3/2019/02/LocalFlorist_FayeRenee.jpg",
-//     "price" : 220000,
-//     "type" : " Florist ",
-//    "location " : "pune",
+//     "username" : "pricemehndi@gmail.com",
+//     "userDisplayName" : " Prince  mehndi",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : " Prince  mehndi",
+//     "img" : "https://cdn0.weddingwire.in/articles/images/3/8/2/7/img_7283/t30_latest-simple-mehndi-designs-thelightsmiths-lead.jpg",
+//     "price" : 6789,
+//     "type" : "mehndi",
+//   "location" : "Thane",
+//     "__v" : 0
+//   },
+  
+  
+//   {
+        
+//     "username" : "hellomehndi@gmail.com",
+//     "userDisplayName" : " Hello mehndi",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : " Hello  mehndi",
+//     "img" : "https://thecrimsonbride.com/wp-content/uploads/2020/03/god-mehendi-design-41-Simple-mehndi-Designs-For-Your-Back-Hands-768x512.jpg",
+//     "price" :6789,
+//     "type" : "mehndi",
+//   "location" : "Thane",
+//     "__v" : 0
+//   },
+  
+  
+//   {
+        
+//     "username" : "pricemehndi@gmail.com",
+//     "userDisplayName" : " Lotus  mehndi",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : " Lotus  mehndi",
+//     "img" : "https://st1.latestly.com/wp-content/uploads/2020/12/Wedding-mehndi-designs.jpg",
+//     "price" :9204,
+//     "type" : "mehndi",
+//   "location" : "Thane",
+//     "__v" : 0
+//   },
+  
+  
+//   {
+        
+//     "username" : "imtheone@gmail.com",
+//     "userDisplayName" : " Anmol Mehandi Art  ",
+//     "description" : "mehndi is a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : " Anmol Mehandi Art ",
+//     "img" : "https://i0.wp.com/shaadiwish.com/blog/wp-content/uploads/2019/07/kb1.jpg",
+//     "price" :2204,
+//     "type" : "mehndi",
+//   "location" : "Thane",
+//     "__v" : 0
+//   },
+  
+  
+  
+//   {
+        
+//     "username" : "youmedesign@gmail.com",
+//     "userDisplayName" : " you me Mehandi Art  ",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : " you me Mehandi Art ",
+//     "img" : "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/10/20/Pictures/_60d401fe-12a3-11eb-894e-a8561a6abce9.JPG ",
+//     "price" :7804,
+//     "type" : "mehndi",
+//   "location" : "Mumbai",
 //     "__v" : 0
 //   },
   
 //   {
         
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Flowers We Do   ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : " Flowers We Do   ",
-//     "img" : "https://cdn0.hitched.co.uk/articles/images/5/3/6/3/img_73635/r10_2x_march-hare-floral-design.jpg",
-//     "price" : 250000,
-//     "type" : " Florist ",
-//   "location " : "pune",
+//     "username" : "pawarart@gmail.com",
+//     "userDisplayName" : " Pawan Mehandi Art ",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : "Pawan Mehandi Art ",
+//     "img" : "https://cdn0.weddingwire.in/articles/images/3/8/2/7/img_7283/t30_latest-simple-mehndi-designs-thelightsmiths-lead.jpg",
+//     "price" :1254,
+//     "type" : "mehndi",
+//   "location" : "Mumbai",
 //     "__v" : 0
 //   },
   
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "456 Flowers    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : " 456 Flowers    ",
-//     "img" : "https://blog.wedsites.com/wp-content/uploads/wedsites-blog-how-much-do-wedding-flowers-cost.jpg",
-//     "price" : 270000,
-//     "type" : " Florist ",
-//   "location " : "pune",
-//     "__v" : 0
-//   },
   
 //   {
         
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Star Flora    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Star Flora    ",
-//     "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyKE1KjKDbxgW0hLqk_BnHuyXENCkZbuyXIg&usqp=CAU",
-//     "price" : 300000,
-//     "type" : " Florist ",
-//   "location " : "Thane",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Flora 123    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Flora 123  ",
-//     "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Ob6xYbRdoSZpi8UDKCBjNV_Ew_3aRGTLHM9SBgb3HKL--CAGXrEQWpeVn-U4XgbPZOY&usqp=CAU",
-//     "price" : 310000,
-//     "type" : " Florist ",
-//   "location " : "Thane",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Alice Flowers    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Alice Flowers   ",
-//     "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQgC7kw5A3QtojxO3SybN6U1G64nrzBrgFRzSA9IWes1Wk0Dg2NgjNzF636C8k9a4vTiw&usqp=CAU",
-//     "price" : 320000,
-//     "type" : " Florist ",
-//   "location " : "Thane",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Simran Lobo    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Simran Lobo   ",
-//     "img" : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/sidra-m-and-d-1581614799.jpeg?crop=1xw:1xh;center,top&resize=480:*",
-//     "price" : 220000,
-//     "type" : " Florist ",
-//   "location " : "Thane",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Flowers and More    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Flowers and More   ",
-//     "img" : "https://images.squarespace-cdn.com/content/v1/5d31d290feea110001811b4b/1578510287241-D1V87VH7AO04B6VQ59UV/Olga_Polo_Photography_The_Flowerman_Ohio_Florist_Wedding_Florist_DIY_Flowers_Designer_Flowers_Columbus_Dayton_Cincinnati_Ohio_Florist_Dahlia_Astilbe_Carnations_Roses_Seeded_Eucalyptus_Bridal_Bouquet_9962.jpg",
-//     "price" : 420000,
-//     "type" : " Florist ",
-//   "location " : "Mumbai",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Just Flower It   ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Just Flower It    ",
-//     "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7nnWhmGRTzNQIeRuzrw-pi8UAr1YM1CjMgJlz3uU1UXm1xwLIOLb-E4eZ42BymWrNEiI&usqp=CAU",
-//     "price" : 400000,
-//     "type" : " Florist ",
-//   "location " : "Mumbai",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Flowers for You    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Flowers for You ",
-//     "img" : "https://cdn0.hitched.co.uk/vendor/5623/3_2/960/JPG/florist-blooming-gre-20190516120844602.jpeg",
-//     "price" : 390000,
-//     "type" : " Florist ",
-//   "location " : "pune",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Mona Lisa     ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Mona Lisa  ",
-//     "img" : "https://images.squarespace-cdn.com/content/v1/583d4bc76a49631ee366cf77/1548752515454-1I1CSW9Y5UY570VF5PAH/beach-wedding-flowers-auckland.jpg?format=2500w",
-//     "price" : 390000,
-//     "type" : " Florist ",
-//   "location " : "Thane",
-//     "__v" : 0
-//   },
-  
-//   {
-        
-//     "username" : "axilldchuna2345@gmail.com",
-//     "userDisplayName" : "Sims Flower Stop    ",
-//     "description" : "The bouquet dance or anniversary dance is an alternative to throwing the bouquet at your wedding reception. The idea is this: Your DJ or emcee invites all married couples onto the dance floor. After a few minutes of dancing, the DJ asks all couples who have been married for five years or less to leave the dance floor. After another few minutes, he asks all those couples married for ten years or less to leave the dance floor, and so on. Eventually, you are left with the longest-married couple that then receives the bouquet. If you're not into tossing your bouquet, this can be a nice way to involve guests of all ages in a feel-good event. ",
-//     "name" : "Sims Flower Stop  ",
-//     "img" : "https://images.unsplash.com/photo-1521520368710-3ab197656d60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZyUyMGZsb3dlcnxlbnwwfHwwfHw%3D&w=1000&q=80",
-//     "price" : 390000,
-//     "type" : " Florist ",
-//   "location " : "pune",
+//     "username" : "joti@gmail.com",
+//     "userDisplayName" : " Joti Mehandi ",
+//     "description" : "mehndiis a form of body art and temporary skin decoration usually drawn on hands or legs, in which decorative designs are created on a person's body, using a paste, created from the powdered dry leaves of the henna plant. It is a popular form of body art among the women of South Asia such as India, Bangladesh, Pakistan, Nepal, Maldives, and Sri Lanka, and resembles similar practices found in North Africa and the Middle East. This kind of body art is called mehndiDesign in India, Pakistan, Bangladesh and Nepal. Whereas, in the West, it is called Henna Designs. According to a 2013 study, henna has been used as a dye for the skin (as well as the hair and nails) for more than 4,000 years",
+//     "name" : "Joti Mehandi ",
+//     "img" : "https://media.weddingz.in/images/173f9ee84da8e212b1823a7ead7803ba/30-latest-bridal-mehndi-designs-of-201837.jpg",
+//     "price" :8923,
+//     "type" : "mehndi",
+//   "location" : "Mumbai",
 //     "__v" : 0
 //   },
   
