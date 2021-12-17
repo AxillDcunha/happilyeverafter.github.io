@@ -194,6 +194,12 @@ app.get("/banquethalls", function (req, res) {
       res.render("venues/kolkata",{req:req,user:req.user,vendor:vendor});
     })
   });
+  app.get("/thane", function (req, res) {
+    req.session.returnTo=req.originalUrl;
+    Vendor.find().then(function(vendor) {
+      res.render("venues/thane",{req:req,user:req.user,vendor:vendor});
+    })
+  });
   app.get("/lawns", function (req, res) {
     req.session.returnTo=req.originalUrl;
     Vendor.find().then(function(vendor) {
