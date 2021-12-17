@@ -260,6 +260,7 @@ app.post("/vendorinfo", function (req, res) {
       "img" : req.body.img,
       "price" :req.body.price,
       "type" : req.body.categorie,
+      "location" : req.body.locate,
       "__v" : 0
   }
   ]).then(function(){
