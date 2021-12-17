@@ -72,9 +72,9 @@ if(window.location.pathname == "/interestedcustomer"){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
-
+        var tt= "Y"
         var request = {
-            "url" : `https://happilyeveraftergithub.herokuapp.com/continfoin/${id}`,
+            "url" : `https://happilyeveraftergithub.herokuapp.com/api/users/${id}/${tt}`,
             "method" : "DELETE"
         }
 
