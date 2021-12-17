@@ -71,10 +71,9 @@ if(window.location.pathname == "/vendordashboard"){
 if(window.location.pathname == "/interestedcustomer"){
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
-        var id = $(this).attr("data-id")
-        var tt= "Y"
+        var tt = $(this).attr("data-id")
         var request = {
-            "url" : `https://happilyeveraftergithub.herokuapp.com/api/users/${id}/${tt}`,
+            "url" : `https://happilyeveraftergithub.herokuapp.com/api/users/${tt}`,
             "method" : "DELETE"
         }
 
